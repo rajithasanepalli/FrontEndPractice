@@ -1,0 +1,12 @@
+<article id="msg"></article>
+<script>
+    let socket = new WebSocket("ws://localhost:8080");
+    socket.onopen = function () {
+        socket.send("welcome to mouritech");
+    }
+
+    socket.onmessage = function (msgs) {
+        document.getElementById("msg").innerHTML += msgs.data + "<br>";
+
+    }
+</script>

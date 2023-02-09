@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template driven forms</title>
+</head>
+
+<body>
+
+    <div class="fluid-container">
+        <form #regForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" #name="ngModel" placeholder="user name"
+                            [(ngModel)]="userModel.name" required [class.is-invalid]="name.invalid && name.touched">
+                        <small class="text-danger" [class.d-none]="name.valid || name.untouched">Username
+                            required</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" #email="ngModel" placeholder="Email"
+                            [(ngModel)]="userModel.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+                            [class.is-invalid]="email.invalid && email.touched">
+                        <div *ngIf="email.errors && (email.invalid || email.touched)">
+                            <small *ngIf="email.errors.required" class="text-danger">Email required</small>
+                            <small *ngIf="email.errors.pattern" class="text-danger"> Invalid email</small>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" name="mobile" #mobile="ngModel"
+                            placeholder="mobile Number" [(ngModel)]="userModel.mobile" required
+                            pattern="^((\\+91-?)|0)?[0-9]{10}$" [class.is-invalid]="mobile.invalid && mobile.touched">
+                        <div *ngIf="mobile.errors && (mobile.invalid || mobile.touched)">
+                            <small *ngIf="mobile.errors.required" class="text-danger">Mobile required</small>
+                            <small *ngIf="mobile.errors.pattern" class="text-danger"> Invalid Mobile</small>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6 second">
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input class="input2" type="radio" value="male" name="gender" [ngModel]="userModel.gender"
+                            #gender="ngModel" required>Male
+                        <input type="radio" value="female" name="gender" [(ngModel)]="userModel.gender"
+                            #gender="ngModel" required>Female
+                    </div>
+                    <div class="form-group">
+                        <select (blur)="validateCourse(drop.value)" (change)="validateCourse(drop.value)"
+                            class="form-control input2" name="course" [(ngModel)]="userModel.dropdown" #drop="ngModel"
+                            required [class.is-invalid]="courseHasError && drop.touched">
+                            <option value="default">Choose course</option>
+                            <option *ngFor="let x of course">
+                                {{x}}
+                            </option>
+                        </select>
+                        <small class="text-danger" [class.d-none]="!courseHasError || drop.untouched">select course
+                            required</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="input2" [(ngModel)]="userModel.check" name="check"
+                            #check="ngModel" required>Remember Me
+                        <div>
+                            <small class="text-danger" [class.d-none]="check.valid || check.untouched">This field
+                                required</small>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="btn btn-primary" [disabled]="regForm.invalid || courseHasError">Submit</button>
+        </form>
+
+    </div>
+     <h1>{{regForm.value |json }}</h1>
+
+    <h1>{{userModel |json }}</h1>
+     <h1>{{regForm.valid}}</h1>
+<h1>{{errorMsg}}</h1>
+</body>
+
+</html> -->

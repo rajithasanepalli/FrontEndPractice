@@ -1,0 +1,1705 @@
+<html>
+    <head>
+        <title>CSS document notes</title>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="maindiv3">
+            <header id="first">
+                <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png" class="image1">
+                <b>MT SKILL BUILDER</b>
+            </header><br>
+            <b class="first"><u>CSS NOTES</u></b>
+            <div class="c">
+            <h4><u>1)What is CSS ?:</u></h4><br>
+           <ol>
+            <li>CSS stands for Cascading Style Sheet.</li>
+            <li>CSS is used to design HTML tags.</li>
+            <li>CSS is a widely used language on the web.</li>
+            <li> HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.</li>
+           </ol><br>
+    <p class="firstp">
+        It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
+        CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.
+    </p><br>
+    
+    <h4><u>2)What does CSS do ?:</u></h4><br>
+    <ol>
+    <li>You can add new looks to your old HTML documents.</li>
+    <li>You can completely change the look of your website with only a few changes in CSS code.</li>
+   </ol><br>
+
+<h4 class="secondh"><u>3)Why use CSS ?:</u></h4><br>
+<p>
+    These are the three major benefits of CSS:</p><br>
+<ol>
+<li>      Solves a big problem<br>
+	Before CSS, tags like font, color, background style, element alignments, border and size had to be repeated on every web page. This was a very long process. For example: If you are developing a large website where fonts and color information are added on every single page, it will be become a long and expensive process. CSS was created to solve this problem. It was a W3C recommendation.
+</li>
+<li>       Saves a lot of time<br>
+	
+	CSS style definitions are saved in external CSS files so it is possible to change the entire website by changing just one file.
+</li>
+<li>      Provide more attributes<br>
+	CSS provides more detailed attributes than plain HTML to define the look and feel of the website.
+</li>
+</ol><br>
+    <h4><u>4)Ways of CSS implementation ?:</u></h4><br>
+    <p>CSS is added to HTML pages to format the document according to information in the style sheet. There are three ways to insert CSS in HTML documents.</p>
+    <ol>
+      <li> Inline CSS</li>
+      <li>Internal CSS</li>
+      <li>External CSS</li></ol><br>
+
+    <h4><u>1) Inline CSS :</u></h4><br>
+<p>Inline CSS is used to apply CSS on a single line or element.</p>
+
+<h4><u>example:</u></h4> 
+     <pre>   
+        &lt;p style="color:blue"&gt;Hello CSS &lt;/p&gt;    
+     </pre>
+     
+    <h4><u>2) Internal CSS:</u></h4><br>
+    <p>Internal CSS is used to apply CSS on a single document or page. It can affect all the elements of the page. It is written inside the style tag within head section of html.</p>
+    
+    <h4><u>example:</u></h4> 
+     <pre>   
+        &lt;style&gt; 
+        &lt; p{color:blue}&gt;  
+        &lt;/style&gt;   
+     </pre>
+     <h4><u>3) External CSS</u></h4><br>
+    <p>External CSS is used to apply CSS on multiple pages or all pages. Here, we write all the CSS code in a css file. Its extension must be .css for example style.css.</p>
+    
+    <h4><u>example:</u></h4> 
+     <pre>   
+        &lt; p{color:blue}&gt;    
+     </pre>
+     <p>You need to link this style.css file to your html pages like this:</p>
+    
+     <pre>   
+        &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;    
+     </pre>
+     <p>The link tag must be used inside head section of html.</p><br>
+
+     <h4><u>5)Inline CSS ?:</u></h4><br>
+     <p>The inline CSS is also a method to insert style sheets in HTML document. This method mitigates some advantages of style sheets so it is advised to use this method sparingly.</p>
+     <p> If you want to use inline CSS, you should use the style attribute to the relevant tag.</p><br>
+     <h4><u>Syntax:</h4></u></h4>
+     <pre>      
+       &lt;htmltag style="cssproperty1:value; cssproperty2:value;"&gt;&lt;/htmltag&gt;   
+    </pre>  
+
+    <h4><u>Example:</u></h4><br>
+    <pre>
+      &lt;style="color:red;margin-left:40px;"&gt;Inline CSS is applied on this heading.&lt;/h2&gt;
+      &lt;p&gt;This paragraph is not affected.&lt;/p&gt;
+    </pre>
+
+    <h4><u>Disadvantages of Inline CSS:</u></h4><br>
+
+<p>You cannot use quotations within inline CSS. If you use quotations the browser will interpret this as an end of your style value.</p>
+<p>These styles cannot be reused anywhere else.</p>
+<p>These styles are tough to be edited because they are not stored at a single place.</p>
+<p>It is not possible to style pseudo-codes and pseudo-classes with inline CSS.</p>
+<p>Inline CSS does not provide browser cache advantages.</p>
+
+<h4><u>6)Internal CSS ?:</u></h4><br>
+
+<p>The internal style sheet is used to add a unique style for a single document.</p>
+<p> It is defined in &lt;head&gt; section of the HTML page inside the &lt;style&gt; tag.</p>
+
+<h4><u>Example:</u></h4><br>
+<pre>
+    &lt;!DOCTYPE html&gt; 
+    &lt;html&gt; 
+    &lt;head&gt;  
+    &lt;style&gt;  
+        body {  
+        background-color: linen;  
+        }  
+        h1 {  
+        color: red;  
+        margin-left: 80px;  
+        }   
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;
+    &lt;h1&gt;The internal style sheet is applied on this heading.&lt;/h1&gt;  
+    &lt;p&gt;This paragraph will not be affected.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre><br>
+<h4><u>7)External CSS ?:</u></h4><br>
+
+<p>The external style sheet is generally used when you want to make changes on multiple pages. It is ideal for this condition because it facilitates you to change the look of the entire web site by changing just one file.</p>
+
+<p>It uses the &lt;link&gt; tag on every pages and the &lt;link&gt; tag should be put inside the head section.</p>
+
+<h4><u>Example:</u></h4><br>
+<pre>
+    &lt;head&gt;  
+    &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;  
+    &lt;/head&gt; 
+</pre> 
+
+<p>The external style sheet may be written in any text editor but must be saved with a .css extension. This file should not contain HTML elements.</p><br>
+
+<h4><u>example of a style sheet file named "mystyle.css":</u></h4><br>
+<pre>
+body {  
+    background-color: lightblue;  
+}  
+h1 {  
+    color: navy;  
+    margin-left: 20px;  
+} 
+</pre>
+  
+<h4><u>Note:</u></h4>
+<p>You should not use a space between the property value and the unit. </p><br>
+<h4><u>For example:</u></h4> <p>It should be margin-left:20px not margin-left:20 px.</p><br>
+
+<h4><u>8)CSS Selector ?:</u></h4><br>
+<p>CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p><br>
+<p>There are several different types of selectors in CSS.</p>
+  <p> 1)CSS Element Selector</p>
+  <p> 2)CSS Id Selector</p>
+  <p> 3)CSS Class Selector</p>
+  <p> 4)CSS Universal Selector</p>
+  <p> 5)CSS Group Selector</p><br>
+
+<h4><u>1) CSS Element Selector:</u></h4><br>
+<p>The element selector selects the HTML element by name.</p>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;
+    &lt;style&gt;  
+        p{  
+            text-align: center;  
+            color: blue;  
+         }   
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;This style will be applied on every paragraph.&lt;/p&gt; 
+    &lt;p id="para1"&gt;Me too!&lt;/p&gt;  
+    &lt;p&gt;And me!&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt; </pre>
+
+<h4><u>2) CSS Id Selector:</u></h4><br>
+<p>The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.</p>
+<p>It is written with the hash character (#), followed by the id of the element.</p><br>
+<h4><u>example:</u></h4>
+<pre>
+   &lt;!DOCTYPE html&gt;  
+   &lt;html&gt; 
+   &lt;head&gt;  
+   &lt;style&gt;  
+   #para1 {  
+        text-align: center;  
+        color: blue;  
+        }  
+   &lt;/style&gt;  
+   &lt;/head&gt;  
+   &lt;body&gt; 
+   &lt;p id="para1"&gt;Hello Javatpoint.com&lt;/p&gt;  
+   &lt;p&gt;This paragraph will not be affected.&lt;/p&gt; 
+   &lt;/body&gt; 
+   &lt;/html&gt; 
+</pre>  
+<h4><u>3) CSS Class Selector:</u></h4><br>
+
+<p>The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.</p><br>
+<h4><u>Note:</u></h4><p>A class name should not be started with a number.</p><br>
+<h4><u>example:</u></h4>
+<pre>
+   &lt;!DOCTYPE html&gt;  
+   &lt;html&gt; 
+   &lt;head&gt;  
+   &lt;style&gt;  
+         .center {  
+            text-align: center;  
+            color: blue;  
+         }  
+   &lt;/style&gt;  
+   &lt;/head&gt;  
+   &lt;body&gt;  
+   &lt;h1 class="center"&gt;This heading is blue and center-aligned.&lt;/h1&gt;  
+   &lt;p class="center"&gt;This paragraph is blue and center-aligned.&lt;/p&gt;  
+   &lt;/body&gt;  
+   &lt;/html&gt;  
+</pre>
+
+<h4><u>CSS Class Selector for specific element:</u></h4><br>
+<p>If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.</p><br>
+<h4><u>example:</u></h4>
+<pre>
+   &lt;!DOCTYPE html&gt;  
+   &lt;html&gt; 
+   &lt;head&gt;  
+   &lt;style&gt;  
+       p.center {  
+           text-align: center;  
+           color: blue;  
+         }  
+   &lt;/style&gt;  
+   &lt;/head&gt;  
+   &lt;body&gt;  
+   &lt;h1 class="center"&gt;This heading is not affected&lt;/h1&gt;  
+   &lt;p class="center"&gt;This paragraph is blue and center-aligned.&lt;/p&gt;   
+   &lt;/body&gt;
+   &lt;/html&gt; 
+</pre>     
+
+<h4><u>4) CSS Universal Selector:</u></h4><br>
+<p>The universal selector is used as a wildcard character. It selects all the elements on the pages.</p><br>
+<h4><u>example:</u></h4>
+<pre>
+   &lt;!DOCTYPE html&gt;  
+   &lt;html&gt;   
+   &lt;head&gt;   
+   &lt;style&gt;   
+       * {  
+          color: green;  
+          font-size: 20px;  
+         }   
+   &lt;/style&gt;   
+   &lt;/head&gt;   
+   &lt;body&gt;   
+   &lt;h2&gt;This is heading&lt;/h2&gt;   
+   &lt;p&gt;This style will be applied on every paragraph.&lt;/p&gt;   
+   &lt;p id="para1"&gt;Me too!&lt;/p&gt;   
+   &lt;p&gt;And me!&lt;/p&gt;   
+   &lt;/body&gt;  
+   &lt;/html&gt;
+</pre> 
+   
+<h4><u>5) CSS Group Selector:</u></h4><br>   
+
+<p>The grouping selector is used to select all the elements with the same style definitions.</p>
+
+<p>Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.</p><br>
+
+<h4><u>Let's see the CSS code without group selector:</u></h4><br> 
+
+h1 {  
+    text-align: center;  
+    color: blue;  
+}  
+h2 {  
+    text-align: center;  
+    color: blue;  
+}  
+p {  
+    text-align: center;  
+    color: blue;  
+} 
+ 
+<p>As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:</p>
+
+h1,h2,p {  
+    text-align: center;  
+    color: blue;  
+} 
+ <br>
+<h4><u>full example of CSS group selector:</u></h4>
+<pre>
+   &lt;!DOCTYPE html&gt;  
+   &lt;html&gt;   
+   &lt;head&gt;   
+   &lt;style&gt;  
+        h1, h2, p {  
+            text-align: center;  
+            color: blue;  
+        }  
+   &lt;/style&gt;   
+   &lt;/head&gt;   
+   &lt;body&gt;   
+   &lt;h1&gt;Hello Javatpoint.com&lt;/h1&gt;   
+   &lt;h2&gt;Hello Javatpoint.com(In smaller font)&lt;/h2&gt;   
+   &lt;p&gt;This is a paragraph.&lt;/p&gt;   
+   &lt;/body&gt;   
+   &lt;/html&gt;  
+</pre>
+
+<h4><u>9)CSS pseudo-classes ?:</u></h4><br>
+<p>A pseudo-class can be defined as a keyword which is combined to a selector that defines the special state of the selected elements. It is added to the selector for adding an effect to the existing elements based on their states. For example, The ":hover" is used for adding special effects to an element when the user moves the cursor over the element.</p>
+<p>The names of the pseudo-class are not case-sensitive.</p><br>
+<h4><u>Syntax:</u></h4><br>
+<p>A pseudo-class starts with a colon (:). Let's see its syntax.</p>
+
+selector: pseudo-class {  
+  property: value;  
+}  
+
+<p>Although there are various CSS pseudo-classes, here we are going to discuss some of the most commonly used pseudo-classes. The widely used CSS classes are tabulated as follows:</p>
+
+<h4><u>pseudo-class</u></h4>	<h4><u>Description</u></h4>
+:active		    IIt is used to add style to an active element.
+:hover		    IIt adds special effects to an element when the user moves the mouse pointer over the element.
+:link		    IIt adds style to the unvisited link.
+:visited	    IIt adds style to a visited link.
+:lang		    IIt is used to define a language to use in a specified element.
+:focus		    IIt selects the element which is focused by the user currently.
+:first-child	It adds special effects to an element, which is the first child of another element.
+
+<p>Let's discuss the above pseudo-classes, along with an example.</p>
+
+<h4><u>:hover pseudo-class--></u></h4>
+
+<p>This pseudo-class adds a special style to an element when the user moves the cursor over it. If you want to make it effective, it must be applied after the ":link" and ":visited" pseudo-classes.</p><br>
+<h4><u>Example</u></h4>
+<pre>
+    &lt;html&gt;  
+    &lt;head&gt;  
+       &lt;style&gt;  
+           body{  
+           text-align:center;  
+            }  
+           h1:hover{  
+           color:red;  
+           }  
+          h2:hover{  
+          color:blue;  
+           }  
+       &lt;/style&gt;  
+    &lt;/head&gt;  
+  
+    &lt;body&gt;  
+    &lt;h1&gt;Hello world &lt;/h1&gt;  
+    &lt;h2&gt;This is an example of :hover pseudo class&lt;/h2&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>  
+
+<h4><u>:active pseudo-class--></u></h4><br>
+<p>It applies when the elements are clicked or activated. It selects the activated element.</p>
+<p>We can understand it with the example given below.</p><br>
+<h4><u>Example:</u></h4><br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;   
+    &lt;head&gt;   
+        &lt;style&gt;   
+                body{  
+                text-align:center;  
+                }  
+                a:active{   
+                color: yellow;   
+                }   
+                h1, h2, h3{   
+                color:red; ;   
+                }   
+        &lt;/style&gt;   
+    &lt;/head&gt;   
+    
+    &lt;body&gt;   
+         &lt;h1&gt;Hello World&lt;/h1&gt;   
+         &lt;h2&gt;The :active pseudo-class&lt;/h2&gt;   
+         &lt;h3&gt;Click the following link to see the effect&lt;/h3&gt;  
+         &lt;a href="#"&gt;Click the link&lt;/a&gt; 
+    &lt;/body&gt;   
+    &lt;/html&gt;  
+</pre>
+<h4><u>:visited pseudo-class--></u></h4><br>
+<p>It selects the visited links and adds special styles to them. Its possible values can be any color name in a valid format.</p><br>
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;!DOCTYPE html&gt;   
+    &lt;html&gt;   
+    &lt;head&gt;   
+        &lt;style&gt;   
+               body{  
+               text-align:center;  
+               }  
+               a:visited{   
+               color: red;   
+               }   
+        &lt;/style&gt;   
+    &lt;/head&gt;   
+    
+    &lt;body&gt;   
+          &lt;h1&gt;Hello World&lt;/h1&gt;   
+          &lt;h2&gt;The :visited pseudo-class&lt;/h2&gt;  
+          &lt;h3&gt;Click the following link to see the effect&lt;/h3&gt;  
+          &lt;a href="#"&gt;Click the link&lt;/a&gt;  
+    &lt;/body&gt;   
+    &lt;/html&gt;  
+</pre>
+<h4><u>:lang pseudo-class--></u></h4><br>
+<p>It is helpful in documents that require multiple languages. It allows us to define special rules for different languages.</p>
+
+<h4><u>Example:</u></h4><br>
+
+<p>In this example, we specify p:lang(fr) which selects the elements having attribute lang="fr".</p>
+<pre>
+    &lt;!DOCTYPE HTML&gt; 
+    &lt;html&gt;  
+    &lt;head&gt;  
+        &lt;style&gt;  
+                body{  
+                text-align:center;  
+                }  
+                p:lang(fr)  
+                {  
+                 font-family:Verdana;  
+                color:blue;  
+                }  
+        &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    
+    &lt;p&gt;Without :lang pseudo class&lt;/p&gt;  
+    &lt;p lang="fr"&gt;With :lang pseudo class with the value fr&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;   
+</pre>
+
+<h4><u>:focus pseudo-class--></u></h4><br>
+<p>It selects the elements that are currently focused on by the user. It is generally used in input elements of the forms and triggers when the user clicks on it.</p><br>
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;!DOCTYPE HTML&gt;  
+    &lt;html&gt;  
+         &lt;style&gt;  
+               form{  
+               text-align:center;  
+               }  
+               input:focus{  
+               border:5px solid lightblue;  
+               box-shadow:10px 10px 10px black;  
+               color: blue;  
+               width:300px;  
+               }  
+         &lt;/style&gt;  
+    &lt;body&gt;  
+    &lt;form&gt;  
+         &lt;h1&gt;Name: &lt;input type="text" value="Enter your name"&gt;&lt;/h1&gt;  
+    &lt;/form&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+<h4><u>:first-child pseudo-class--></u></h4><br>
+
+<p>It matches a particular element, which is the first child of another element and adds a special effect to the corresponding element.</p>
+
+<h4><u>Note:</u></h4>
+<p> We have to declare a <!DOCTYPE> at the top of the document to make ":first-child" pseudo-class to work in IE8 and its earlier versions.</p>
+
+<p>The following illustration explains it more clearly.</p><br>
+
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;!DOCTYPE HTML&gt;  
+    &lt;html&gt;  
+       &lt;head&gt;  
+          &lt;style&gt;  
+                 h1:first-child {  
+                text-indent: 200px;  
+                color:blue;  
+                }  
+          &lt;/style&gt; 
+       &lt;/head&gt;  
+  
+    &lt;body&gt;  
+          &lt;div&gt;  
+          &lt;h1&gt;It is the first heading in div. It will be indented, and its color will be blue.&lt;/h1&gt;  
+          &lt;h1&gt;It is the Second heading in div, which will not be affected.&lt;/h1&gt;  
+          &lt;/div&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt; 
+</pre> 
+
+<h4><u>The simple tooltip hover:</u></h4><br>
+p>A tooltip specifies extra information about something when the user moves the cursor over the element. Let's create a tooltip by using the ":hover" pseudo-class.</p><br>
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+         body{  
+         text-align:center;  
+         }  
+         h2{  
+         display: none;  
+         background-color: red;  
+         color:white;  
+         padding: 20px;  
+         }  
+         div{  
+         font-size:40px;  
+         }  
+         div:hover h2 {  
+         display: block;  
+         }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h1&gt;Move your mouse to the below text to see the effect&lt;/h1&gt;   
+    &lt;div&gt;Hello World  
+    &lt;h2&gt;Welcome to the javaTpoint&lt;/h2&gt;  
+    &lt;/div&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>  
+
+<h4><u>CSS classes and pseudo-classes:</u></h4><br>
+<p>The classes in CSS can be combined with pseudo-classes. We can write it as-</p>
+<h4><u>Syntax:</u></h4><br>
+selector.class: pseudo-class {  
+  property: value;  
+} <br>
+<p>We can understand it with the following example.</p>
+
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;!DOCTYPE html&gt;   
+    &lt;html&gt;   
+    &lt;head&gt;   
+    &lt;style&gt;   
+          body{  
+          text-align:center;  
+          }  
+          div.hello:hover {  
+             color: red;  
+             font-size:40px;  
+          }   
+    &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+    &lt;h1&gt; CSS Classes and pseudo-classes&lt;/h1&gt;   
+    &lt;h2&gt; Move your cursor to the below text&lt;/h2&gt;   
+    &lt;div class="hello"&gt; Hello World&lt;/p&gt;   
+    &lt;/body&gt;   
+    &lt;/html&gt;
+</pre>  
+
+<h4><u>10)CSS Pseudo-elements ?:</u></h4><br>
+
+<p>A pseudo-class can be defined as a keyword which is combined to a selector that defines the special state of the selected elements. Unlike the pseudo-classes, the pseudo-elements are used to style the specific part of an element, whereas the pseudo-classes are used to style the element.</p>
+
+<p>As an example, a pseudo-element can be used to style the first letter or the first line of an element. The pseudo-elements can also be used to insert the content after or before an element.</p>
+
+<h4><u>Syntax:</u></h4><br>
+
+<p>Pseudo-element has a simple syntax which is given as follows:</p>
+
+selector::pseudo-element {  
+  property: value;  
+}
+  
+<p>We have used the double colon notation (::pseudo-element) in the syntax. In CSS3, the double colon replaced the single colon notation for pseudo-elements. It was an attempt from W3C to differentiate between the pseudo-elements and pseudo-classes. So, it is recommended to use double colon notation (::pseudo-element) instead of using single-colon notation (:).</p>
+
+<p>In CSS1 and CSS2, there is the use of a single colon (:) syntax for both pseudo-elements and pseudo-classes. The single colon syntax is valid for pseudo-elements in CSS1 and CSS2 for backward compatibility.</p>
+
+<p>Although there are several CSS pseudo-elements, we are discussing some of the most commonly used. The widely used CSS pseudo-elements are tabulated as follows:</p>
+
+pseudo-element			        Description
+::first-letter (:first-letter)	It selects the first letter of the text.
+::first-line (:first-line)	    It styles the first line of the text.
+::before (:before)		        It is used to add something before the element's content.
+::after (:after)		        It is used to add something after the element's content.
+::selection			            It is used to select the area of an element that is selected by the user.
+
+<p>Let's discuss the above pseudo-elements, along with an example.</p>
+
+<h4><u>The ::first-letter pseudo-element:</u></h4><br>
+
+
+<p>As its name implies, it affects the first letter of the text. It can be applied only to block-level elements. Instead of supporting all CSS properties, it supports some of the CSS properties that are given below.</p>
+	<p>Color properties (such as color)</p>
+	<p>Font properties (such as font-style, font-family, font-size, font-color, and many more).</p>
+	<p>Margin properties (such as margin-top, margin-right, margin-bottom, and margin-left).</p>
+	<p>Border properties (like border-top, border-right, border-bottom, border-left, border-color, border-width, and many more).</p>
+	<p>Padding properties (such as padding-top, padding-right, padding-bottom, and padding-left).</p>
+	<p>Background properties (such as background-color, background-repeat, background-image, and background-position).</p>
+	<p>Text related properties (such as text-shadow, text-transform, text-decoration, etc.).</p>
+<p>Other properties are vertical-align (only when the float is 'none') word-spacing, line-height, line-spacing, etc.</p>
+
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;html&gt;   
+    &lt;head&gt;   
+         &lt;style&gt;   
+             body{  
+             text-align: center;  
+             }  
+             h1::first-letter {   
+             font-family: Lucida Calligraphy;  
+             font-size: 3cm;  
+             color: red;  
+             text-shadow: 5px 8px 9px green;  
+             }   
+             h1{  
+             color: blue;  
+             }  
+         &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+    &lt;h1&gt; Welcome to the javaTpoint.com &lt;/h1&gt;   
+    &lt;h2&gt; This is an example of ::first-letter pseudo-element. &lt;/h2&gt;  
+    &lt;/body&gt;   
+    &lt;/html&gt;
+</pre>      
+
+<h4><u>The ::first-line pseudo-element:</u></h4><br>
+<p>It is similar to the ::first-letter pseudo-element, but it affects the entire line. It adds the special effects to the first line of the text. It supports the following CSS properties:</p>
+	<p>Color properties (such as color)</p>
+	<p>Font properties (such as font-style, font-family, font-size, font-color, and many more).</p>
+	<p>Background properties (such as background-color, background-repeat, background-image, and background-position).</p>
+<p>Other properties are word-spacing, letter-spacing, line-height, vertical-align, text-transform, text-decoration.</p>
+
+<h4><u>Example:</u></h4>
+<p>In this example we will see the use of ::first-line element to add special effects to the element's first line.</p>
+<pre>
+    &lt;html&gt;   
+    &lt;head&gt;   
+        &lt;style&gt;   
+            body{  
+            text-align: center;  
+            }  
+            h1::first-line {   
+            font-family: Lucida Calligraphy;  
+            font-size: 1cm;  
+            color: red;  
+            text-shadow: 5px 8px 9px green;  
+            }   
+        &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+         &lt;h1&gt; Welcome to the javaTpoint.com. This site is developed so that students may learn computer science related technologies easily. The javaTpoint.com is committed to provide easy and in-depth tutorials on various technologies. &lt;/h1&gt;   
+         &lt;h2&gt; This is an example of ::first-line pseudo-element. &lt;/h2&gt; 
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>
+
+<h4><u>The ::before pseudo-element:</u></h4><br>
+<p>It allows us to add something before the element's content. It is used to add something before the specific part of an element. Generally, it is used with the content property.</p>
+
+<p>We can also add the regular strings or images before the content using this pseudo-element.</p>
+
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;html&gt;   
+    &lt;head&gt;   
+         &lt;style&gt;   
+                body{  
+                text-align: center;  
+                }  
+                h1::before {   
+                content: "'Hello World.'";  
+                color: red;  
+                }   
+         &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+        &lt;h1>Welcome to the javaTpoint.com. &lt;/h1&gt;   
+        &lt;h2&gt; This is an example of ::before pseudo-element. &lt;/h2&gt;  
+        &lt;h3&gt; In the first line the "Hello World" has added by using the pseudo-element ::before &lt;/h3&gt;  
+    &lt;/body&gt;   
+    &lt;/html&gt;
+</pre>  
+
+<h4><u>The ::after pseudo-element:</u></h4><br>
+<p>It works similar to ::before pseudo-element, but it inserts the content after the content of the element. It is used to add something after the specific part of an element. Generally, it is used with the content property.</p>
+
+<p>It also allows us to add regular strings or images after the content.</p>
+
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;html&gt;   
+    &lt;head&gt;   
+            &lt;style&gt;   
+            body{  
+            text-align: center;  
+            }  
+            h1::after {   
+            content: "'Welcome to the javaTpoint.com.'";  
+            color: red;  
+            }   
+            &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+            &lt;h1&gt; Hello World. &lt;/h1&gt;   
+            &lt;h2&gt; This is an example of ::after pseudo-element. &lt;/h2&gt;  
+            &lt;h3&gt; In the first line the "Welcome to the javaTpoint.com." has added by using the pseudo-element ::after &lt;/h3&gt; 
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>The ::selection pseudo-element:</u></h4><br>
+<p>It is used to style the part of an element that is selected by the user. We can use the following CSS properties with it:</p>
+	<p>color.</p>
+	<p>background-color.</p>
+	<p>Other properties include cursor, outline, etc.</p>
+<h4><u>Example:</u></h4>
+<pre>
+    &lt;html&gt;   
+    &lt;head&gt;   
+            &lt;style&gt;   
+            body{  
+            text-align: center;  
+            }  
+            h1::selection {  
+            color: red;  
+            }   
+            &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+        &lt;h1&gt; Hello World. &lt;/h1&gt;   
+        &lt;h2&gt; Select the text in first line to see the effect. &lt;/h2&gt;  
+        &lt;h3&gt; This is an example of ::selection pseudo-element. &lt;/h3&gt;  
+    &lt;/body&gt;   
+    &lt;/html&gt; 
+</pre>
+
+<h4><u>CSS classes and pseudo-element:</u></h4><br> 
+<p>The pseudo-elements can be combined with CSS classes to style the specific element having that class. The syntax of combining the CSS classes with the pseudo-elements is given below.</p>
+
+<h4><u>Syntax:</u></h4>
+<p>It can be written as:</p><br>
+selector.class::pseudo-element {  
+property: value  
+}  
+
+<h4><u>Example:</u></h4>
+<p>This example will affect the first letter of those &lt;h1&gt; elements that have class="example" rather than affecting the all &lt;h1&gt; elements.</p>
+<pre>
+    &lt;html&gt;   
+    &lt;head&gt;   
+            &lt;style&gt;   
+            body{  
+            text-align: center;  
+            }  
+            h1.example::first-letter {  
+            color: red;  
+            font-size: 2cm;  
+            font-family: Lucida Calligraphy;  
+            }   
+            &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+            &lt;h1 class="example"&gt; Hello World. &lt;/h1&gt;   
+            &lt;h1&gt; Welcome to the javaTpoint.com. &lt;/h1&gt;   
+            &lt;h3&gt; This is an example of pseudo-element with CSS classes.&lt;/h3&gt; 
+    &lt;/body&gt;   
+    &lt;/html&gt;
+</pre>
+
+<h4><u>11)CSS Colors Properties ?:</u></h4><br> 
+<p>The color property in CSS is used to set the color of HTML elements. Typically, this property is used to set the background color or the font color of an element.</p>
+<p>In CSS, we use color values for specifying the color. We can also use this property for the border-color and other decorative effects.</p>
+<p>We can define the color of an element by using the following ways:</p>
+       1)RGB format.
+       2)RGBA format.
+       3)Hexadecimal notation.
+       4)HSL.
+       5)HSLA.
+       6)Built-in color.
+
+<p>Let's understand the syntax and description of the above ways in detail.</p>
+
+<h4><u>1)RGB Format:</u></h4><br>
+<p>RGB format is the short form of 'RED GREEN and BLUE' that is used for defining the color of an HTML element simply by specifying the values of R, G, B that are in the range of 0 to 255.</p>
+<p>The color values in this format are specified by using the rgb() property. This property allows three values that can either be in percentage or integer (range from 0 to 255).</p>
+<p>This property is not supported in all browsers; that's why it is not recommended to use it.</p>
+
+<h4><u>Syntax:</u></h4>
+color: rgb(R, G, B);  
+
+<h4><u>2)RGBA Format:</u></h4><br> 
+<p>It is almost similar to RGB format except that RGBA contains A (Alpha) that specifies the element's transparency. The value of alpha is in the range 0.0 to 1.0, in which 0.0 is for fully transparent, and 1.0 is for not transparent.</p>
+
+<h4><u>Syntax:</u></h4>
+color:rgba(R, G, B, A);  
+
+<h4><u>3)Hexadecimal notation:</u></h4><br> 
+<p>Hexadecimal can be defined as a six-digit color representation. This notation starts with the # symbol followed by six characters ranges from 0 to F. In hexadecimal notation, the first two digits represent the red (RR) color value, the next two digits represent the green (GG) color value, and the last two digits represent the blue (BB) color value.</p>
+<p>The black color notation in hexadecimal is #000000, and the white color notation in hexadecimal is #FFFFFF. Some of the codes in hexadecimal notation are #FF0000, #00FF00, #0000FF, #FFFF00, and many more.</p>
+
+<h4><u>Syntax:</u></h4> 
+color:#(0-F)(0-F)(0-F)(0-F)(0-F)(0-F);  
+
+<h4><u>Short Hex codes:</u></h4><br> 
+<p>It is a short form of hexadecimal notation in which every digit is recreated to arrive at an equivalent hexadecimal value.</p>
+<p>For example, #7B6 becomes #77BB66 in hexadecimal.</p>
+<p>The black color notation in short hex is #000, and the white color notation in short hex is #FFF. Some of the codes in short hex are #F00, #0F0, #0FF, #FF0, and many more.</p>
+
+<h4><u>4)HSL:</u></h4><br> 
+<p>It is a short form of Hue, Saturation, and Lightness. Let's understand them individually.</p>
+
+<p>Hue: It can be defined as the degree on the color wheel from 0 to 360. 0 represents red, 120 represents green, 240 represents blue.</p>
+
+<p>Saturation: It takes value in percentage in which 100% represents fully saturated, i.e., no shades of gray, 50% represent 50% gray, but the color is still visible, and 0% represents fully unsaturated, i.e., completely gray, and the color is invisible.</p>
+
+<p>Lightness: The lightness of the color can be defined as the light that we want to provide the color in which 0% represents black (there is no light), 50% represents neither dark nor light, and 100% represents white (full lightness).</p>
+
+<p>Let's see the syntax of HSL in color property.</p>
+
+<h4><u>Syntax:</u></h4> 
+color:hsl(H, S, L);  
+
+<h4><u>5)HSLA:</u></h4><br> 
+<p>It is entirely similar to HSL property, except that it contains A (alpha) that specifies the element's transparency. The value of alpha is in the range 0.0 to 1.0, in which 0.0 indicates fully transparent, and 1.0 indicates not transparent.</p>
+
+<h4><u>Syntax:</u></h4><br> 
+color:hsla(H, S, L, A);
+
+<h4><u>6)Built-in Color:</u></h4><br> 
+<p>As its name implies, built-in color means the collection of previously defined colors that are used by using a name such as red, blue, green, etc.</p>
+
+<h4><u>Syntax:</u></h4><br> 
+color: color-name;
+  
+<p>Let's see the list of built-in colors along with their decimal and hexadecimal values.</p>
+S.no.	Color name	Hexadecimal Value	Decimal Value or rgb() value
+1.	Red		#FF0000			rgb(255,0,0)
+2.	Orange		#FFA500			rgb(255,165,0)
+3.	Yellow		#FFFF00			rgb(255,255,0)
+4.	Pink		#FFC0CB			rgb(255,192,203)
+5.	Green		#008000			rgb(0,128,0)
+6.	Violet		#EE82EE			rgb(238,130,238)
+7.	Blue		#0000FF			rgb(0,0,255)
+8.	Aqua		#00FFFF			rgb(0,255,255)
+9.	Brown		#A52A2A			rgb(165,42,42)
+10.	White		#FFFFFF			rgb(255,255,255)
+11.	Gray		#808080			rgb(128,128,128)
+12.	Black		#000000			rgb(0,0,0)
+
+<p>The illustration of CSS colors, which includes the above properties, is given below.</p>
+
+<h4><u>Example:</u></h4><br> 
+<pre>
+    &lt;html&gt;   
+            &lt;head&gt;   
+                &lt;title&gt;CSS hsl color property&lt;/title&gt;   
+                    &lt;style&gt;   
+                            h1{   
+                            text-align:center;   
+                            }   
+                            #rgb{  
+                                color:rgb(255,0,0);  
+                            }  
+                            #rgba{  
+                                color:rgba(255,0,0,0.5);  
+                            }  
+                            #hex{  
+                                color:#EE82EE;  
+                            }  
+                            #short{  
+                                color: #E8E;  
+                            }  
+                            #hsl{  
+                                color:hsl(0,50%,50%);  
+                            }  
+                            #hsla{                
+                                color:hsla(0,50%,50%,0.5);  
+                            }  
+                            #built{  
+                                color:green;  
+                            }  
+                    &lt;/style&gt;   
+            &lt;/head&gt;   
+            &lt;body&gt;   
+            &lt;h1 id="rgb"&gt;   
+                Hello World. This is RGB format.  
+            &lt;/h1&gt;   
+            &lt;h1 id="rgba"&gt;   
+                Hello World. This is RGBA format.  
+            &lt;/h1&gt;   
+            &lt;h1 id="hex"&gt;   
+                 Hello World. This is Hexadecimal format.  
+            &lt;/h1&gt;   
+            &lt;h1 id="short"&gt;   
+                Hello World. This is Short-hexadecimal format.  
+            &lt;/h1&gt;   
+            &lt;h1 id="hsl"&gt;   
+                Hello World. This is HSL format.  
+            &lt;/h1&gt;   
+            &lt;h1 id="hsla"&gt;   
+                Hello World. This is HSLA format.  
+            &lt;/h1&gt;   
+            &lt;h1 id="built"&gt;   
+                Hello World. This is Built-in color format.  
+            &lt;/h1&gt;   
+         &lt;/body&gt;   
+    &lt;/html&gt; 
+</pre>  
+
+<h4><u>12)CSS Background Properties ?</u></h4><br> 
+CSS background property is used to define the background effects on element. There are 5 CSS background properties that affects the HTML elements:
+	1)background-color
+	2)background-image
+	3)background-repeat
+	4)background-attachment
+	5)background-position
+
+<h4><u>1) CSS background-color:</u></h4><br> 
+<p>The background-color property is used to specify the background color of the element.</p>
+
+You can set the background color like this:
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;headv  
+    &lt;style&gt;  
+        h2,p{  
+            background-color: #b0d4de;  
+            }  
+    &lt;/style&gt;
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h2&gt;My first CSS page.&lt;/h2&gt;  
+    &lt;p&gt;Hello Javatpoint. This is an example of CSS background-color.&lt;/p&gt;  
+    &lt;/body&gt; 
+    &lt;/html&gt;
+</pre>   
+
+<h4><u>2) CSS background-image:</u></h4><br> 
+<p>The background-image property is used to set an image as a background of an element. By default the image covers the entire element.</p>
+You can set the background image for a page like this.
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+    body {  
+    background-image: url("paper1.gif");  
+    margin-left:100px;  
+    }  
+    &lt;/style&gt; 
+    &lt;/head&gt;  
+    &lt;body&gt; 
+    &lt;h1&gt;Hello Javatpoint.com&lt;/h1&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;       
+</pre>
+<h4><u>Note:</u></h4>
+ The background image should be chosen according to text color. The bad combination of text and background image may be a cause of poor designed and not readable webpage.
+
+<h4><u>3) CSS background-repeat:</u></h4><br> 
+
+<p>By default, the background-image property repeats the background image horizontally and vertically. Some images are repeated only horizontally or vertically.</p>
+
+The background looks better if the image repeated horizontally only.
+
+<h4><u>background-repeat: repeat-x;</u></h4>
+<pre>
+    &lt;!DOCTYPE html&gt;   
+    &lt;html&gt;   
+    &lt;head&gt;   
+    &lt;style&gt;   
+        body {  
+            background-image: url("gradient_bg.png");  
+            background-repeat: repeat-x;  
+        }  
+    &lt;/style&gt;   
+    &lt;/head&gt;   
+    &lt;body&gt;   
+    &lt;h1&gt; Hello Javatpoint.com&lt;/h1&gt;   
+    &lt;/body&gt;   
+    &lt;/html&gt;  
+</pre>  
+
+<h4><u>background-repeat: repeat-y;</u></h4>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        body {  
+             background-image: url("gradient_bg.png");  
+             background-repeat: repeat-y;  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h1&gt;Hello Javatpoint.com&lt;/h1&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt; 
+</pre> 
+
+<h4><u>4) CSS background-attachment:</u></h4><br> 
+
+<p>The background-attachment property is used to specify if the background image is fixed or scroll with the rest of the page in browser window. If you set fixed the background image then the image will not move during scrolling in the browser. Let?s take an example with fixed background image.</p>
+
+background: white url('bbb.gif');  
+background-repeat: no-repeat;  
+background-attachment: fixed;  
+
+<h4><u>5) CSS background-position:</u></h4><br> 
+<p>The background-position property is used to define the initial position of the background image. By default, the background image is placed on the top-left of the webpage.</p>
+You can set the following positions:
+	center
+	top
+	bottom
+	left
+	right
+background: white url('good-morning.jpg');  
+background-repeat: no-repeat;  
+background-attachment: fixed;  
+background-position: center;  
+
+<h4><u>13)CSS Border Properties ?:</u></h4><br>
+The CSS border is a shorthand property used to set the border on an element.<br>
+The CSS border properties are use to specify the style, color and size of the border of an element. The CSS border properties are given below
+	1)border-style
+	2)border-color
+	3)border-width
+	4)border-radius
+
+<h4><u>1) CSS border-style:</u></h4><br>
+The Border style property is used to specify the border type which you want to display on the web page.
+There are some border style values which are used with border-style property to define a border.<br>
+
+Value	Description
+none	It doesn't define any border.
+dotted	It is used to define a dotted border.
+dashed	It is used to define a dashed border.
+solid	It is used to define a solid border.
+double	It defines two borders wIth the same border-width value.
+groove	It defines a 3d grooved border. effect is generated according to border-color value.
+ridge	It defines a 3d ridged border. effect is generated according to border-color value.
+inset	It defines a 3d inset border. effect is generated according to border-color value.
+outset	It defines a 3d outset border. effect is generated according to border-color value.<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p.none {border-style: none;}  
+        p.dotted {border-style: dotted;}  
+        p.dashed {border-style: dashed;}  
+        p.solid {border-style: solid;}  
+        p.double {border-style: double;}  
+        p.groove {border-style: groove;}  
+        p.ridge {border-style: ridge;}  
+        p.inset {border-style: inset;}  
+        p.outset {border-style: outset;}  
+        p.hidden {border-style: hidden;}  
+    &lt;/style&gt;  
+    &lt;/head&gt; 
+    &lt;body&gt;  
+    &lt;p class="none"&gt;No border.&lt;/p&gt;  
+    &lt;p class="dotted"&gt;A dotted border.&lt;/p&gt;  
+    &lt;p class="dashed"&gt;A dashed border.&lt;/p&gt;
+    &lt;p class="solid"&gt;A solid border.&lt;/p&gt;  
+    &lt;p class="double"&gt;A double border.&lt;/p&gt; 
+    &lt;p class="groove"&gt;A groove border.&lt;/p&gt;  
+    &lt;p class="ridge"&gt;A ridge border.&lt;/p&gt;  
+    &lt;p class="inset"&gt;An inset border.&lt;/p&gt;  
+    &lt;p class="outset"&gt;An outset border.&lt;/p&gt;  
+    &lt;p class="hidden"&gt;A hidden border.&lt;/p&gt; 
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>2) CSS border-width:</u></h4>
+The border-width property is used to set the border's width. It is set in pixels. You can also use the one of the three pre-defined values, thin, medium or thick to set the width of the border.
+<br>
+<h4><u>Note:</u></h4>
+ The border-width property is not used alone. It is always used with other border properties like "border-style" property to set the border first otherwise it will not work.<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p.one {  
+                border-style: solid;  
+                border-width: 5px;  
+              }  
+        p.two {  
+                border-style: solid;  
+                border-width: medium;  
+              }  
+        p.three {  
+                border-style: solid;  
+                border-width: 1px;  
+              }  
+    &lt;/style&gt;  
+    &lt;/head&gt; 
+    &lt;body&gt;  
+    &lt;p class="one"&gt;Write your text here.&lt;/p&gt;  
+    &lt;p class="two"&gt;Write your text here.&lt;/p&gt;  
+    &lt;p class="three"&gt;Write your text here.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>3) CSS border-color:</u></h4><br>
+<p>There are three methods to set the color of the border.</p>
+	Name: It specifies the color name. For example: "red".
+	RGB: It specifies the RGB value of the color. For example: "rgb(255,0,0)".
+	Hex: It specifies the hex value of the color. For example: "#ff0000".
+There is also a border color named "transparent". If the border color is not set it is inherited from the color property of the element.
+<h4><u>Note:</u></h4><br>
+ The border-color property is not used alone. It is always used with other border properties like "border-style" property to set the border first otherwise it will not work.<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p.one {  
+            border-style: solid;  
+            border-color: red;  
+        }  
+        p.two {  
+            border-style: solid;  
+            border-color: #98bf21;  
+        }   
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p class="one"&gt;This is a solid red border&lt;/p&gt;  
+    &lt;p class="two"&gt;This is a solid green border&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>
+
+<h4><u>14)CSS Margin Properties ?:</u></h4><br>
+CSS Margin property is used to define the space around elements. It is completely transparent and doesn't have any background color. It clears an area around the element.
+
+Top, bottom, left and right margin can be changed independently using separate properties. You can also change all properties at once by using shorthand margin property.
+<h4><u>There are following CSS margin properties:</u></h4><br>
+<h4><u>CSS Margin Properties:</u></h4>
+
+Property	Description
+margin		This property is used to set all the properties in one declaration.
+margin-left	it is used to set left margin of an element.
+margin-right	It is used to set right margin of an element.
+margin-top	It is used to set top margin of an element.
+margin-bottom	It is used to set bottom margin of an element.
+
+<h4><u>CSS Margin Values:</u></h4><br>
+These are some possible values for margin property.<br>
+
+Value		Description
+auto		This is used to let the browser calculate a margin.
+length		It is used to specify a margin pt, px, cm, etc. its default value is 0px.
+%		It is used to define a margin in percent of the width of containing element.
+inherit		It is used to inherit margin from parent element.
+
+<h4><u>Note:</u></h4>
+You can also use negative values to overlap content.<br>
+
+<h4><u>Margin: Shorthand Property:</u></h4><br>
+You can define different margin for different sides for an element.<br>
+<pre>
+    &lt;!DOCTYPE html>  
+    &lt;html>  
+    &lt;head>  
+    &lt;style>  
+        p {  
+            background-color: pink;  
+        }  
+        p.ex {  
+            margin-top: 50px;  
+            margin-bottom: 50px;  
+            margin-right: 100px;  
+            margin-left: 100px;  
+        }  
+        &lt;/style&gt;  
+        &lt;/head&gt;  
+        &lt;body&gt;  
+        &lt;p&gt;This paragraph is not displayed with specified margin. &lt;/p&gt;  
+        &lt;p class="ex"&gt;This paragraph is displayed with specified margin.&lt;/p&gt;  
+        &lt;/body&gt;  
+        &lt;/html&gt;  
+</pre>       
+
+<h4><u>Margin: Shorthand Property:</u></h4><br>
+CSS shorthand property is used to shorten the code. It specifies all the margin properties in one property.
+
+There are four types to specify the margin property. You can use one of them.
+	1)margin: 50px 100px 150px 200px;
+	2)margin: 50px 100px 150px;
+	3)margin: 50px 100px;
+	4)margin 50px;
+
+<h4><u>1) margin: 50px 100px 150px 200px;</u></h4><br>
+
+It identifies that:
+	top margin value is 50px
+	right margin value is 100px
+	bottom margin value is 150px
+	left margin value is 200px<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p {  
+            background-color: pink;  
+        }  
+        p.ex {  
+            margin: 50px 100px 150px 200px;  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;This paragraph is not displayed with specified margin. &lt;/p&gt;  
+    &lt;p class="ex"&gt;This paragraph is displayed with specified margin.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;   
+</pre>
+
+<h4><u>2) margin: 50px 100px 150px;</u></h4><br>
+
+It identifies that:
+	top margin value is 50px
+	left and right margin values are 100px
+	bottom margin value is 150px<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt; 
+        p {  
+            background-color: pink;  
+        }  
+        p.ex {  
+            margin: 50px 100px 150px;  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;This paragraph is not displayed with specified margin. &lt;/p&gt; 
+    &lt;p class="ex"&gt;This paragraph is displayed with specified margin.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre> 
+
+<h4><u>3) margin: 50px 100px;</u></h4><br>
+It identifies that:
+	top and bottom margin values are 50px
+	left and right margin values are 100px<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p {  
+            background-color: pink;  
+        }  
+        p.ex {  
+            margin: 50px 100px;  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt; 
+    &lt;body&gt;  
+    &lt;p&gt;This paragraph is not displayed with specified margin. &lt;/p&gt;  
+    &lt;p class="ex"&gt;This paragraph is displayed with specified margin.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre> 
+
+<h4><u>4) margin: 50px;</u></h4><br>
+
+It identifies that:
+	top right bottom and left margin values are 50px<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt; 
+        p {  
+            background-color: pink;  
+        }  
+        p.ex {  
+            margin: 50px;  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;This paragraph is not displayed with specified margin. &lt;/p&gt;  
+    &lt;p class="ex"&gt;This paragraph is displayed with specified margin.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>
+
+<h4><u>15)CSS Padding properties ?</u></h4><br>
+
+CSS Padding property is used to define the space between the element content and the element border.
+
+It is different from CSS margin in the way that CSS margin defines the space around elements. CSS padding is affected by the background colors. It clears an area around the content.
+
+Top, bottom, left and right padding can be changed independently using separate properties. You can also change all properties at once by using shorthand padding property.
+
+<h4><u>CSS Padding Properties:</u></h4><br>
+Property	Description
+padding		It is used to set all the padding properties in one declaration.
+padding-left	It is used to set left padding of an element.
+padding-right	It is used to set right padding of an element.
+padding-top	It is used to set top padding of an element.
+padding-bottom	It is used to set bottom padding of an element.
+
+<h4><u>CSS Padding Values:</u></h4><br>
+Value	Description
+length	It is used to define fixed padding in pt, px, em etc.
+%	It defines padding in % of containing element.
+
+<h4><u>CSS Padding Example:</u></h4><br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p {  
+            background-color: pink;  
+        }  
+        p.padding {  
+            padding-top: 50px;  
+            padding-right: 100px;  
+            padding-bottom: 150px;  
+            padding-left: 200px;  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;This is a paragraph with no specified padding.&lt;/p&gt;  
+    &lt;p class="padding"&gt;This is a paragraph with specified paddings.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>16)CSS text-align Properties</u></h4><br>
+This CSS property is used to set the horizontal alignment of a table-cell box or the block element. It is similar to the vertical-align property but in the horizontal direction.
+
+<h4><u>Syntax:</u></h4><br>
+
+text-align: justify | center | right | left | initial | inherit;
+  
+Possible values
+	justify: It is generally used in newspapers and magazines. It stretches the element's content in order to display the equal width of every line.
+	center: It centers the inline text.
+	right: It is used to align the text to the right.
+	left: It is used to align the text to the left.
+
+Let's see an example that will demonstrate the text-align property.
+
+<h4><u>Example:</u></h4><br>
+<pre>
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;/head&gt;  
+    &lt;style&gt;  
+        h2{  
+        color: blue;  
+        }  
+    &lt;/style&gt;  
+        &lt;body&gt;  
+        &lt;h1&gt;Example of text-align proeprty&lt;/h1&gt;  
+        
+        &lt;h2 style = "text-align: center;"&gt;  
+                text-align: center;  
+        &lt;/h2&gt;  
+        
+        &lt;h2 style = "text-align: right;"&gt;  
+            text-align: right;  
+        &lt;/h2&gt;  
+        
+        &lt;h2 style = "text-align: left;"&gt;  
+          text-align: left;  
+        &lt;/h2&gt;  
+        &lt;h2 style = "text-align: justify;"&gt;  
+          text-align: justify; To see its effect, it should be applied on large paragraph.  
+        &lt;/h2&gt;  
+  
+        &lt;/body&gt;  
+        &lt;/html&gt;  
+</pre>  
+
+<h4><u>17)CSS Font Properties ?:</u></h4><br>
+
+CSS Font property is used to control the look of texts. By the use of CSS font property you can change the text size, color, style and more. You have already studied how to make text bold or underlined. Here, you will also know how to resize your font using percentage.<br>
+
+<h4><u>These are some important font attributes:</u></h4>
+    1)CSS Font color: This property is used to change the color of the text. (standalone attribute)
+	2)CSS Font family: This property is used to change the face of the font.
+	3)CSS Font size: This property is used to increase or decrease the size of the font.
+	4)CSS Font style: This property is used to make the font bold, italic or oblique.
+	5)CSS Font variant: This property creates a small-caps effect.
+	6)CSS Font weight: This property is used to increase or decrease the boldness and lightness of the font.
+
+<h4><u>1) CSS Font Color:</u></h4>
+CSS font color is a standalone attribute in CSS although it seems that it is a part of CSS fonts. It is used to change the color of the text.<br>
+
+There are three different formats to define a color:
+	By a color name
+	By hexadecimal value
+	By RGB
+
+In the above example, we have defined all these formats.<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        body {  
+            font-size: 100%;  
+        }  
+        h1 { color: red; }  
+        h2 { color: #9000A1; }   
+        p { color:rgb(0, 220, 98); }   
+        }  
+    &lt;/style&gt; 
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h1&gt;This is heading 1&lt;/h1&gt;  
+    &lt;h2&gt;This is heading 2&lt;/h2&gt;  
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>  
+
+<h4><u>2) CSS Font Family:</u></h4>
+CSS font family can be divided in two types:
+	Generic family: It includes Serif, Sans-serif, and Monospace.
+	Font family: It specifies the font family name like Arial, New Times Roman etc.<br>
+
+Serif: Serif fonts include small lines at the end of characters. Example of serif: Times new roman, Georgia etc.<br>
+
+Sans-serif: A sans-serif font doesn't include the small lines at the end of characters. Example of Sans-serif: Arial, Verdana etc.<br>
+
+CSS font serif<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        body {  
+        font-size: 100%;  
+        }  
+        h1 { font-family: sans-serif; }  
+        h2 { font-family: serif; }   
+        p { font-family: monospace; }   
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h1&gt;This heading is shown in sans-serif.&lt;/h1&gt;  
+    &lt;h2&gt;This heading is shown in serif.&lt;/h2&gt; 
+    &lt;p&gt;This paragraph is written in monospace.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>3) CSS Font Size:</u></h4>
+CSS font size property is used to change the size of the font.
+These are the possible values that can be used to set the font size:<br>
+Font Size Value		Description
+xx-small		used to display the extremely small text size.
+x-small			used to display the extra small text size.
+small			used to display small text size.
+medium			used to display medium text size.
+large			used to display large text size.
+x-large			used to display extra large text size.
+xx-large		used to display extremely large text size.
+smaller			used to display comparatively smaller text size.
+larger			used to display comparatively larger text size.<br>
+
+size in pixels or %	used to set value in percentage or in pixels.
+<pre>
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;title&gt;Practice CSS font-size property&lt;/title&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p style="font-size:xx-small;"&gt;  This font size is extremely small.&lt;/p&gt;    
+    &lt;p style="font-size:x-small;"&gt;  This font size is extra small&lt;/p&gt;    
+    &lt;p style="font-size:small;"&gt;  This font size is small&lt;/p&gt;    
+    &lt;p style="font-size:medium;"&gt;  This font size is medium. &lt;/p&gt;    
+    &lt;p style="font-size:large;"&gt;  This font size is large. &lt;/p&gt;    
+    &lt;p style="font-size:x-large;"&gt;  This font size is extra large. &lt;/p&gt;    
+    &lt;p style="font-size:xx-large;"&gt;  This font size is extremely large. &lt;/p&gt;    
+    &lt;p style="font-size:smaller;"&gt;  This font size is smaller. &lt;/p&gt;    
+    &lt;p style="font-size:larger;"&gt;  This font size is larger. &lt;/p&gt;    
+    &lt;p style="font-size:200%;"&gt;  This font size is set on 200%. &lt;/p&gt;    
+    &lt;p style="font-size:20px;"&gt;  This font size is 20 pixels.  &lt;/p&gt;   
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>4) CSS Font Style:</u></h4>
+CSS Font style property defines what type of font you want to display. It may be italic, oblique, or normal.<br>
+<pre>
+    &lt;!DOCTYPE html&gt; 
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        body {  
+        font-size: 100%;  
+        }  
+        h2 { font-style: italic; }  
+        h3 { font-style: oblique; }  
+        h4 { font-style: normal; }   
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h2&gt;This heading is shown in italic font.&lt;/h2&gt;  
+    &lt;h3&gt;This heading is shown in oblique font.&lt;/h3&gt;  
+    &lt;h4&gt;This heading is shown in normal font.&lt;/h4&gt; 
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>  
+
+<h4><u>5) CSS Font Variant:</u></h4>
+CSS font variant property specifies how to set font variant of an element. It may be normal and small-caps.<br>
+<pre>
+    &lt;!DOCTYPE html>&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+        p { font-variant: small-caps; }  
+        h3 { font-variant: normal; }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h3&gt;This heading is shown in normal font.&lt;/h3&gt;  
+    &lt;p&gt;This paragraph is shown in small font.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+
+<h4><u>6) CSS Font Weight:</u></h4>
+CSS font weight property defines the weight of the font and specify that how bold a font is. The possible values of font weight may be normal, bold, bolder, lighter or number (100, 200..... upto 900).<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;body&gt;  
+    &lt;p style="font-weight:bold;"&gt;This font is bold.&lt;/p&gt;  
+    &lt;p style="font-weight:bolder;"&gt;This font is bolder.&lt;/p&gt;  
+    &lt;p style="font-weight:lighter;"&gt;This font is lighter.&lt;/p&gt;  
+    &lt;p style="font-weight:100;"&gt;This font is 100 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:200;"&gt;This font is 200 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:300;"&gt;This font is 300 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:400;"&gt;This font is 400 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:500;"&gt;This font is 500 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:600;"&gt;This font is 600 weight.&lt;/p&gt; 
+    &lt;p style="font-weight:700;"&gt;This font is 700 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:800;"&gt;This font is 800 weight.&lt;/p&gt;  
+    &lt;p style="font-weight:900;"&gt;This font is 900 weight.&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;    
+</pre>
+
+<h4><u>18)CSS Animation ?:</u></h4><br>
+
+CSS Animation property is used to create animation on the webpage. It can be used as a replacement of animation created by Flash and JavaScript.<br>
+<h4><u>CSS3 @keyframes Rule</u></h4>
+The animation is created in the @keyframe rule. It is used to control the intermediate steps in a CSS animation sequence.<br>
+<h4><u>What animation does?</u></h4>
+An animation makes an element change gradually from one style to another. You can add as many as properties you want to add. You can also specify the changes in percentage.0% specify the start of the animation and 100% specify its completion.<br>
+<h4><u>How CSS animation works?</u></h4>
+When the animation is created in the @keyframe rule, it must be bound with selector; otherwise the animation will have no effect.<br>
+
+The animation could be bound to the selector by specifying at least these two properties:
+	The name of the animation
+	The duration of the animation<br>
+CSS animation properties:
+Property			Description
+@keyframes			It is used to specify the animation.
+animation			This is a shorthand property, used for setting all the properties, except the animation-play-state and the animation-fill- mode property.
+animation-delay			It specifies when the animation will start.
+animation-direction		It specifies if or not the animation should play in reserve on alternate cycle.
+animation-duration		It specifies the time duration taken by the animation to complete one cycle.
+animation-fill-mode		it specifies the static style of the element. (when the animation is not playing)
+animation-iteration-count	It specifies the number of times the animation should be played.
+animation-play-state		It specifies if the animation is running or paused.
+animation-name			It specifies the name of @keyframes animation.
+animation-timing-function	It specifies the speed curve of the animation.<br>
+
+<h4><u>CSS animation example: changing background color</u></h4>
+Let's see a simple CSS animation example that changes background color of rectangle from RED to BLACK.<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;   
+        div {  
+            width: 100px;  
+            height: 100px;  
+            background: red;  
+            -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */  
+            animation: myfirst 5s;  
+        }  
+        /* Chrome, Safari, Opera */  
+        @-webkit-keyframes myfirst {  
+            from {background: red;}  
+            to {background: green;}  
+        }  
+        /* Standard syntax */  
+        @keyframes myfirst {  
+            from {background: red;}  
+            to {background: green;}  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The IE 9 and earlier versions don't support CSS3 animation property. &lt;/p&gt;  
+    &lt;div&gt;&lt;/div&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt; 
+</pre> 
+
+<h4><u>CSS animation example: Moving Rectangle</u></h4>
+Let's take another example to display animation with percentage value.<br>
+<pre>
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;   
+        div {  
+            width: 100px;  
+            height: 100px;  
+            background: red;  
+            position: relative;  
+            -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */  
+            animation: myfirst 5s;  
+        }  
+        /* Chrome, Safari, Opera */  
+        @-webkit-keyframes myfirst {  
+            0%   {background:red; left:0px; top:0px;}  
+            25%  {background:yellow; left:300px; top:0px;}  
+            50%  {background:blue; left:200px; top:300px;}  
+            75%  {background:green; left:0px; top:200px;}  
+            100% {background:red; left:0px; top:0px;}  
+        }  
+        /* Standard syntax */  
+        @keyframes myfirst {  
+            0%   {background:red; left:0px; top:0px;}  
+            25%  {background:yellow; left:300px; top:0px;}  
+            50%  {background:blue; left:300px; top:200px;}  
+            75%  {background:green; left:0px; top:200px;}  
+            100% {background:red; left:0px; top:0px;}  
+        }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The Internet Explorer 9 and its earlier versions don't support this example.&lt;/p&gt; 
+    &lt;div&gt;&lt;/div&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre><br>
+</div>
+<a href="rules for css quiz.html"> <input type="button" value="Start Quiz" class="btn3"></a><br><br>
+
+<footer>
+    <p>2021 All Rights Reserved.Free Mouritech Skill Builder Templates</p>
+ </footer>
+ </div>
+
+             
+     </body>
+ </html>

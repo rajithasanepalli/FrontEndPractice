@@ -1,0 +1,14 @@
+// const data = 100;
+// data = 200;
+// console.log(data);
+const arr = [1, 2, 3, 4, 5];
+//arr = [];
+console.log(arr);
+arr[0] = 100;
+arr[4] = 500;
+arr[5] = 800;
+console.log(arr);
+arr.pop();
+console.log(arr);
+arr.shift();
+console.log(arr);

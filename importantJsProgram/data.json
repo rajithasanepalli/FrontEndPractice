@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "shirt",
+      "product_cat": "service"
+    },
+    {
+      "id": 3,
+      "name": "pant",
+      "product_cat": "test"
+    },
+    {
+      "id": 1,
+      "name": "jeans",
+      "product_cat": "olla"
+    }
+  ]
+}

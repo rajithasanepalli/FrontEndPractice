@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    color: red;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+
+}
+
+nav a.active {
+    background-color: red;
+    color: white
+}
+
+.btns {
+    margin-left: 600px;
+}

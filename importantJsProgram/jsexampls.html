@@ -1,0 +1,589 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</link>
+<script>
+
+
+    // 1Q)   let employee = (name, salary, age) => {
+    //     console.log(name, salary, age);
+
+    // }
+    // employee("Raji", 2000, 10);
+
+
+
+    // 2Q) for (let i = 0; i <= 4; i++) {
+    //     setTimeout(() => {
+    //         console.log(i);
+    //     }, 5000)
+    // }
+
+
+    // 3Q) ((name, age) => {
+    //     console.log(name, age)
+    // })("rajitha", 24)
+
+    //constructor functions
+
+    //4Q)  function class_one() {
+    //     this.sub1 = "angular",
+    //         this.sub2 = "React"
+    // }
+    // let obj1 = new class_one();
+    // console.log(obj1.sub1, obj1.sub2);
+
+
+
+    //5Q)  function class_one() {
+    //     this.sub1 = "angular",
+    //         this.my_fun = function () {
+    //             return "hello";
+    //         }
+    // }
+    // let obj = new class_one();
+    // console.log(obj.sub1, obj.my_fun());
+
+
+
+    // 6Q) function class_one() {
+
+    // }
+    // class_one.prototype.var1 = "Hello";
+    // let obj = new class_one();
+    // console.log(obj.var1);
+
+
+
+    // function class_one() {
+
+    // }
+
+    // class_one.prototype.var1 = "hi";
+    // function class_two() {
+
+    // }
+    // class_two.prototype = Object.create(class_one.prototype);
+    // class_two.prototype.var2 = "raji";
+    // let obj = new class_two();
+    // console.log(obj.var1, obj.var2);
+
+
+
+
+    //  7Q) function class_one() {
+
+    // }
+
+    // class_one.prototype.fun1 = function () {
+    //     return "hi";
+
+    // }
+    // function class_two() {
+
+    // }
+    // class_two.prototype = Object.create(class_one.prototype);
+    // class_two.prototype.fun1 = function () {
+    //     return "raji";
+
+    // }
+    // let obj = new class_two();
+    // console.log(obj.fun1());
+
+    //Generators
+
+
+    //    8Q)  function* generators() {
+    //         yield "statement-1";
+    //         yield "statement-2";
+    //         yield "statement-3";
+    //         yield "statement-4";
+
+    //     }
+
+    //     let cursor = generators();
+    //     console.log(cursor.next());
+    //     console.log(cursor.next());
+    //     console.log(cursor.next());
+    //     console.log(cursor.next());
+    //     console.log(cursor.next());
+
+
+
+    // 9Q)
+    // function* generators() {
+    //     yield 100;
+    //     yield 200;
+    //     return 300;
+    //     yield 500;
+
+    // }
+
+    // let cursor = generators();
+    // console.log(cursor.next());
+    // console.log(cursor.next());
+    // console.log(cursor.next());
+    // console.log(cursor.next());
+    // console.log(cursor.next());
+
+    function* generators() {
+        yield 100;
+        yield* fun_1();
+        yield* fun_2();
+
+
+
+    }
+    function* fun_1() {
+        return yield 600;
+    }
+    function* fun_2() {
+        yield 700;
+
+
+    }
+
+
+    let cursor = generators();
+    for (i = 0; i <= 4; i++) {
+        console.log(cursor.next());
+    }
+
+
+    //10Q)
+    //call back functions
+    // function fun_one(arg1) {
+    //     console.log(arg1);
+    //     console.log(arg1());
+
+    // }
+    // function fun_two() {
+    //     return "Hello";
+    // }
+    // fun_one(fun_two);
+
+
+
+    //11Q)
+    // function fun_one(arg1, arg2, arg3) {
+    //     console.log(arg1(), arg2(), arg3());
+
+    // }
+    // fun_one(function fun_two() {
+    //     return "Hello_1";
+    // }, function fun_three() {
+    //     return "hello_2";
+    // }, function fun_four() {
+    //     return "hello3";
+    // })
+
+    //12Q)
+
+    // function fun_one(arg1, arg2, arg3) {
+    //     return arg1("hello1") + "......" + arg2("hello2") + "....." + arg3("hello3");
+
+    // }
+    // fun_one(function fun_two(arg1) {
+    //     console.log(arg1);
+    // }, function fun_three(arg1) {
+    //     console.log(arg1);
+    // }, function fun_four(arg1) {
+    //     console.log(arg1)
+    // })
+
+
+
+    //13Q)
+
+    // function fun_one(arg1) {
+    //     return arg1(fun_three)
+
+    // }
+    // function fun_two(arg2) {
+    //     return arg2("hello")
+
+    // }
+    // function fun_three(arg3) {
+    //     console.log(arg3)
+
+    // }
+    // fun_one(fun_two)
+
+
+    //14Q)
+    // function calci(num, add) {
+
+    //     return add(num + 10, false);
+
+    // }
+    // function addition(addRes, error) {
+    //     if (error == false) {
+    //         console.log(addRes);
+    //     }
+
+    // }
+    // calci(5, addition)
+
+
+
+
+    //15Q)
+
+    // function calci(num, callback) {
+    //     return callback(num + 5, false)
+
+    // };
+    // let sub = (num, callback) => {
+    //     return callback(num - 2, false)
+
+    // };
+
+    // calci(5, (addRes, error) => {
+    //     if (error == false) {
+    //         sub(addRes, (subRes, error) => {
+    //             if (!error) {
+    //                 console.log(subRes);
+    //             }
+
+    //         })
+    //     }
+    // })
+
+
+
+    //Json examples
+    //16Q)
+    // let employee = {
+    //     name: "Rajitha",
+    //     sal: 10
+    // }
+    // console.log(employee.name)
+
+    // 17Q)
+    // let employee = {
+    //     department: { id: 1, name: "it" },
+    //     company: { name: "mouritech", city: "hyderabad" }
+    // }
+    // console.log(employee.department.id, employee.department.name);
+    // console.log(employee.company.name, employee.company.city)
+
+
+    //18Q) iterating json object
+
+    // let employee = {
+    //     details: {
+    //         name: "rajitha",
+    //         age: 23,
+    //         salary: 23000
+    //     }
+    // }
+    // for (let x in employee.details) {
+    //     console.log(employee.details[x]);
+
+    // }
+
+    //19Q)
+
+    // let databases = {
+    //     "oracle": oracle,
+    //     "sql": sql,
+    //     "mongo": mongo()
+    // };
+    // function oracle() {
+    //     return "oracle connection";
+    // }
+    // function sql() {
+    //     return "oracle connection";
+    // }
+
+    // function mongo() {
+    //     return "oracle connection";
+    // }
+    // console.log(databases.oracle(), databases.sql(), databases.mongo)
+
+
+    //20Q)
+
+    // let databases = {
+    //     "oracle": () => {
+    //         return "hello1"
+    //     },
+    //     "sql": () => {
+    //         return "hello2"
+    //     },
+    //     "mongo": () => {
+    //         return "hello3"
+    //     }
+    // };
+
+    // console.log(databases.oracle(),
+    //     databases.sql(),
+    //     databases.mongo())
+
+
+    //21Q)
+
+    // let employee = {
+
+    //     name: "rajitha",
+    //     age: 23,
+    //     salary: 23000
+    // }
+    // console.log(Object.keys(employee));
+    // console.log(Object.values(employee));
+
+
+    // 22Q) deep copy
+    // let employee = {
+
+    //     "name": "rajitha",
+    //     "age": 23,
+    //     "salary": 23000
+    // }
+    // let employee2 = {
+
+    //     "name": "pujitha",
+    //     "age": 23,
+    //     "salary": 22000
+    // }
+    // let employee3 = {
+
+    //     name: "namatha",
+    //     age: 23,
+    //     salary: 23000
+    // }
+    // let employee4 = { ...employee, ...employee2 };
+    // let employee5 = {}
+
+    // employee5.name = "namatha",
+    //     employee5.age = 23,
+    //     console.log(employee5);
+
+    // console.log(employee4);
+    // let customer = { ...employee };
+    // customer.name = "lalitha";
+    // delete employee.salary; //delete particular key
+    // console.log(employee, customer)
+
+
+
+    //22Q)locking object using freeze
+
+    // let employee = {
+
+    //     "name": "rajitha",
+    //     "age": 23,
+    //     "salary": 23000
+    // }
+    // Object.freeze(employee);
+    // console.log(employee);
+    // employee.city = "mydukur" //add
+    // console.log(employee);
+    // delete employee.age; //delewte
+    // console.log(employee);
+    // employee.name = "laddu"; //update
+    // console.log(employee);
+
+    //23Q)
+
+
+    // let employee = {
+
+    //     "name": "rajitha",
+    //     "age": 23,
+    //     "salary": 23000
+    // }
+    // Object.seal(employee);
+    // console.log(employee); //read
+    // employee.city = "mydukur" //add
+    // console.log(employee);
+    // delete employee.age; //delewte
+    // console.log(employee);
+    // employee.name = "laddu"; //update
+    // console.log(employee);
+
+    //24Q)
+
+    // let employee = {
+
+    //     "name": "rajitha",
+    //     "age": 23,
+    //     "salary": 23000
+    // }
+    // Object.defineProperty(employee, "city", { value: "hydrabad", writable: false })
+    // console.log(employee);
+    // employee.city = "chennai"; //update not done
+    // console.log(employee);
+    // delete employee.city; //delete not done
+    // console.log(employee);
+
+
+
+
+    // Object.defineProperty(employee, "city", { value: "hydrabad", writable: true })
+    // console.log(employee);
+    // employee.city = "chennai"; //update done
+    // console.log(employee);
+    // delete employee.city; //delete not done
+    // console.log(employee);
+
+
+    //25Q)
+
+    // let employee = {
+
+    //     "name": "rajitha",
+    //     "age": 23,
+    //     "salary": 23000
+    // }
+    // Object.defineProperties(employee, {
+    //     "city": { "value": "hyderabad", writable: false },
+    //     "colony": { "value": "mydukur", writable: true }
+    // });
+    // employee.city = "chennai"; //update done
+    // console.log(employee);
+    // employee.colony = "chennai";
+    // // delete employee.city; //delete not done
+    // console.log(employee);
+
+
+    //26Q)
+
+    // let arr = [
+    //     { "e_id": 1, "e_name": "raji", "e_city": "hyderabad" },
+    //     { "e_id": 2, "e_name": "puji", "e_city": "chennai" },
+    //     { "e_id": 3, "e_name": "lalli", "e_city": "pune" },
+    //     { "e_id": 4, "e_name": "sana", "e_city": "bangelore" },
+
+    // ]
+    // document.write(`
+    //    <table border="1" cellpadding="10px" cellspacing="10px" align="center" >
+    //     <tr>
+    //         <th>Emp_Id</th>
+    //         <th>Emp_Name</th>
+    //         <th>Emp_City</th>
+    //         </tr>
+    //         `)
+    // arr.forEach((record) => {
+    //     document.write(`
+    //                            <tr>
+    //                             <td>${record.e_id}</td>
+    //                             <td>${record.e_name}</td>
+    //                             <td>${record.e_city}</td>
+    //                             </tr>
+
+    //             `);
+
+
+    // });
+    // document.write(`</table>`)
+
+
+    // 27Q)
+
+    // let products = [
+    //     { "p_id": 1, "p_name": "shirt", image: "https://rukminim1.flixcart.com/image/332/398/ktyp8cw0/shirt/g/s/j/m-kcsh-03chk03-nbbr-fubar-original-imag777tqzzg7wew.jpeg?q=50" },
+    //     { "p_id": 2, "p_name": "pant", image: "https://rukminim1.flixcart.com/image/332/398/ktyp8cw0/shirt/g/s/j/m-kcsh-03chk03-nbbr-fubar-original-imag777tqzzg7wew.jpeg?q=50" },
+    //     { "p_id": 3, "p_name": "t-shirt", image: "https://rukminim1.flixcart.com/image/332/398/ktyp8cw0/shirt/g/s/j/m-kcsh-03chk03-nbbr-fubar-original-imag777tqzzg7wew.jpeg?q=50" },
+    //     { "p_id": 4, "p_name": "shorts", image: "https://rukminim1.flixcart.com/image/332/398/ktyp8cw0/shirt/g/s/j/m-kcsh-03chk03-nbbr-fubar-original-imag777tqzzg7wew.jpeg?q=50" },
+
+    // ]
+    // document.write(`
+    //    <table border="1" cellpadding="10px" cellspacing="10px" align="center" >
+    //     <tr>
+    //         <th>Product_Id</th>
+    //         <th>Product_Name</th>
+    //         <th>Product_image</th>
+    //         <th>Actions</th>
+    //         </tr>
+    //         `)
+    // products.forEach((record) => {
+    //     document.write(`
+    //                            <tr>
+    //                             <td>${record.p_id}</td>
+    //                             <td>${record.p_name}</td>
+    //                             <td><image width="20px" src=${record.image}></td>
+    //                                 <td><i class="fa fa-trash-o"></i>
+    //                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-edit">
+    //                                     </td>
+    //                             </tr>
+
+    //             `);
+
+
+    // });
+    // document.write(`</table>`)
+
+    //28Q)
+
+    // let obj = {
+    //     "name": "raji"
+    // }
+    // let str = JSON.stringify(obj);
+    // console.log(typeof str);
+    // let obj1 = JSON.parse(str);
+    // console.log(typeof obj1);
+    // let arr = Object.entries(obj);
+    // console.log(arr);
+    // let obj2 = {
+    //     "name": "raji"
+    // }
+    // Object.keys(obj2).length == 0 ? console.log("empty") : console.log("non Empty");
+
+
+    //29Q)
+    // let obj1 = {
+    //     "name": "raji"
+    // }
+
+    // let obj2 = {
+    //     "branch": "lali"
+    // }
+    // console.log(Object.assign(obj1, obj2));
+
+    //30Q)
+
+    // let arr = [100, 200, 300, 400];
+    // console.log(arr.filter((arrRes) => {
+    //     return arrRes >= 300;
+    // }))
+
+    // let arr = [100, 200, 300, 400];
+    // console.log(arr.filter((arrRes) => {
+    //     return arrRes == 100;
+
+    // }).map((arrRes) => {
+    //     return { arrRes };
+
+    // })
+    // )
+
+    //    31Q) let arr = [
+    //         { "price": 100 },
+    //         { "price": 200 },
+    //         { "price": 300 },
+    //         { "price": 400 }
+    //     ]
+    //     console.log(arr.filter((element) => {
+    //         return element.price >= 200;
+
+    //     })
+    //     );
+
+//    32Q)
+//     let key1 = "hello1";
+//     let key2 = "hello2";
+//     let obj = {
+//         key1,
+//         key2
+//     }
+//     console.log(obj)
+
+
+//Json server
+
+//npm install -g json-server  //installation
+// json-server --watch data.json  //load data into server
+
+
+
+</script>

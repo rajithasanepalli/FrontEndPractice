@@ -1,0 +1,82 @@
+<script>
+
+    // let obj = {}
+    // let key1 = {}
+    // let value1 = "hello1"
+    // obj[key1] = value1
+
+    // let key2 = {}
+    // let value2 = "hello2"
+    // obj[key1] = value2
+    // console.log(obj)
+    // let map = new Map();
+    // map.set("key1", "hello").set("key2", "welcome").set("key3", "Rajitha")
+    // console.log(map)
+    // console.log(map.size)
+    // console.log([...map.keys()])
+    // console.log(map.has("key4"))
+    // console.log(map.delete("key3"))
+    // console.log(map)
+    // console.log(map.get("key1"))
+    // console.log([...map.values()])
+    // for (let [k, v] of map) {
+    //     console.log(k, v)
+    // }
+    // map.clear();
+    // console.log(map)
+    // map.set("key1", "hello1")
+    // map.set("key2", "hello2")
+    // map.set("key1", "hello3")
+    // map.set("key2", "hello4")
+    // console.log(map)
+
+    // map.set(100, 100)
+    // map.set("key1", "raji")
+    // map.set(1n, 100n)
+    // map.set(true, false)
+    // map.set(undefined, undefined)
+    // map.set([], [])
+    // map.set({}, {})
+    // map.set(null, null)
+    // console.log(map)
+
+    // let weakMap = new WeakMap();
+    // weakMap.set("key1", "hello")
+    // weakMap.set(100, "number")
+    // weakMap.set(true, "boolean")
+    // weakMap.set({}, "welcome")
+    //console.log(weakMap)
+    //Note
+    //In weak Map keys should be json objects
+
+    //set map
+
+    let set = new Set();
+    console.dir(set);
+    set.add(10);
+    set.add(20);
+    set.add(30);
+    set.add(10);
+    set.add(20);
+    set.add(30);
+    console.log(set)
+    //Note:Set not allows duplicate values
+    console.log(set.keys())
+    console.log(set.values())
+    console.log(set.has(10))
+    console.log(set.has(100))
+    console.log(set.delete(10))
+    for (let v of set) {
+        console.log(v)
+    }
+    console.log(set)
+    console.log(set.size)
+    set.clear()
+    console.log(set)
+
+
+</script>
+
+//Note:
+//set allows all types of data types
+//weak set allow only json object

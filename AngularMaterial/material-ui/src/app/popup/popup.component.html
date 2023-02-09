@@ -1,0 +1,49 @@
+<div>
+    Hie welcome {{data.name}}
+</div>
+
+<div>
+    <button mat-icon-button mat-dialog-close class="close">
+        <i class="material-icons">
+            close
+        </i>
+    </button>
+
+</div>
+<div class="card-body">
+    <form>
+        <mat-form-field class="col-md-6">
+            <mat-label>Description</mat-label>
+            <input matInput maxlength="255" placeholder="Description">
+        </mat-form-field>
+        <mat-form-field class="col-md-6">
+            <mat-label>Signatory</mat-label>
+            <input matInput placeholder="Signatory" maxlength="30" required>
+        </mat-form-field>
+        <mat-form-field class="col-md-6">
+            <mat-label>Routing Number</mat-label>
+            <input matInput placeholder="Routing Number" minlength="9" maxlength="9" required>
+
+        </mat-form-field>
+        <mat-form-field class="col-md-6">
+            <mat-label>Account Number</mat-label>
+            <input matInput placeholder="Account Number" maxlength="17" required>
+
+        </mat-form-field>
+
+
+        <mat-checkbox class="col-md-6" labelPosition="before" color="warn">Subscrime Me</mat-checkbox>
+        <mat-radio-group class="col-md-6">
+            <mat-label>Gender</mat-label>
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+
+
+        <div>
+            <button mat-button class="btn btn-outline-primary" type="submit">Submit</button>
+
+        </div>
+
+    </form>
+</div>

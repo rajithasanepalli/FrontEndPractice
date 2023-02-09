@@ -1,0 +1,7 @@
+<h1>Student -details Component</h1>
+<ul *ngFor="let x of students">
+    <li (click)="selectChange(x)" [class.selected]="isSelected(x)">{{x.id}}-->{{x.name}}-->{{x.course}}</li>
+
+</ul>
+<h2>{{errorMsg}}</h2>
+<h1>{{selectedId}}</h1>

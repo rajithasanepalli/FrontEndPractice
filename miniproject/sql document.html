@@ -1,0 +1,787 @@
+<html>
+    <head>
+        <title>SQL document notes</title>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="maindiv7">
+            <header id="first">
+                <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png" class="image1">
+                <b>MT SKILL BUILDER</b>
+            </header><br>
+            <b class="first"><u>SQL NOTES</u></b><br><br>
+            <div class="c">
+            <h4><u>1. What is Oracle ? What are different editions of Oracle SQL ?:</u></h4><br>
+            <p>Oracle database is a relational database management system. It is known as Oracle database, OracleDB or simply Oracle. It is produced and marketed by Oracle Corporation.</p>
+            <p>Oracle was originally developed by Lawrence Ellison (Larry Ellision) and his two friends and former co-worker in 1977. Oracle DB runs on the most major platforms like Windows, UNIX, Linux and Mac OS.</p><br>
+            <h4><u>These are different editions of Oracle  :</u></h4><br>
+            
+            <p>(i) Enterprise Edition: It is the most robust and secure edition. It offers all features, including superior performance and security.</p>
+            <p>(ii) Standard Edition: It provides the base functionality for users that do not require Enterprise Edition's robust package.</p>
+            <p>(iii) Express Edition (XE): It is the lightweight, free and limited Windows and Linux edition.</p>
+            <p>(iv) Oracle Lite: It is designed for mobile devices.</p><br>
+     
+            <h4><u>2. How to CREATE a TABLE in Oracle SQL ?:</u></h4><br>
+         In Oracle, CREATE TABLE statement is used to create a new table in the database.<br>
+<h4><u>Syntax :</u></h4><br>
+<pre>
+	CREATE TABLE table_name  
+	(   
+  	    column1 datatype [ NULL | NOT NULL ],  
+  	    column2 datatype [ NULL | NOT NULL ],  
+ 	    ...  
+ 	    column_n datatype [ NULL | NOT NULL ]  
+	);
+</pre>
+       <p>*  The CREATE TABLE AS statement is used to create a table from an existing table by copying the columns of existing table.</p>
+
+<h4><u>Syntax :</u></h4><br> 
+<pre>
+	CREATE TABLE new_table  
+	AS (SELECT column_1, column2, ... column_n  
+    	FROM old_table_1, old_table_2, ... old_table_n);
+</pre><br>
+<h4><u>3. How to ALTER a TABLE in Oracle SQL ?:</u></h4><br>
+    <p>In Oracle, ALTER TABLE statement specifies how to add, modify, drop or delete columns in a table. It is also used to rename a table.</p><br>
+
+<h4><u>Syntaxes:</u></h4><br>
+<h4><u> (i) Adding Columns :</u></h4><br>
+ 
+<pre>	
+	ALTER TABLE table_name  
+ 	ADD (column_1 column-definition,  
+      	        column_2 column-definition,  
+      	        ...  
+       	        column_n column_definition);
+</pre><br>
+<h4><u> (ii) Modifying Columns :</u></h4><br>
+ 
+<pre>
+	ALTER TABLE table_name  
+  	MODIFY (column_1 column_type,  
+          	   column_2 column_type,  
+         	   ...  
+          	   column_n column_type);
+</pre><br>
+<h4><u> (iii) Dropping Column :</u></h4><br>
+
+<pre>
+	ALTER TABLE table_name  
+ 	  DROP COLUMN column_name;  
+</pre><br>     
+<h4><u> (iv) Renaming Column :</u></h4><br>
+ 
+<pre>
+	ALTER TABLE table_name  
+  	  RENAME COLUMN old_name to new_name;
+</pre><br>        
+<h4><u> (iv) Renaming Table :</u></h4><br>
+ 
+<pre>
+	ALTER TABLE table_name  
+  	  RENAME TO new_table_name; 
+</pre><br>
+
+<h4><u> 4. How to DROP a TABLE in Oracle SQL ?:</u></h4><br>
+     Oracle DROP TABLE statement is used to remove or delete a table from the Oracle database.
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	DROP [schema_name].TABLE table_name  
+	[ CASCADE CONSTRAINTS ]  
+	[ PURGE ];  				
+</pre><br>
+<h4> ----->CASCADE CONSTRAINTS :</h4>
+            <p> If there are referential integrity constraints on table_name and you do not specify the CASCADE CONSTRAINTS option, 
+			       the DROP TABLE statement will return an error and Oracle will not drop the table</p><br>
+
+<h4> -----> PURGE :</h4>                  
+            <p>This statement will drop the table and issue a PURGE so that the space associated with the table is released and the table is not placed in 
+	            recycle bin. So, it is not possible to recover that table if required.</p><br>
+
+<h4><u> 5. What are different QUERIES in Oracle SQL ?:</u></h4><br>
+<h4><u> (i) SELECT Query :</u></h4><br>
+ 
+	The Oracle SELECT statement is used to retrieve data from one or more than one tables, object tables, views, object views etc.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expressions  
+	FROM tables  
+	WHERE conditions; 
+</pre><br>
+<h4><u> (ii) INSERT Query :</u></h4><br>
+	In Oracle, INSERT statement is used to add a single record or multiple records into the table.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	 INSERT INTO table  
+	(column1, column2, ... column_n )  
+	VALUES  
+	(expression1, expression2, ... expression_n ); 
+</pre><br>
+<h4><u> (iii) INSERT ALL Query :</u></h4><br>
+    The Oracle INSERT ALL statement is used to insert multiple rows with a single INSERT statement. You can insert the rows into one table or multiple tables by using only one SQL command.<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	INSERT ALL  
+	    INTO table_name (column1, column2, column_n) VALUES (expr1, expr2, expr_n)  
+	    INTO table_name(column1, column2, column_n) VALUES (expr1, expr2, expr_n)  
+	    INTO table_name (column1, column2, column_n) VALUES (expr1, expr2, expr_n)  
+	SELECT * FROM dual; 
+</pre><br>   
+<h4><u> (iv) UPDATE Query :</u></h4><br>
+	In Oracle, UPDATE statement is used to update the existing records in a table. You can update a table in 2 ways.<br>
+<h4><u> Syntax 1 :  ( Normal Method )</u></h4><br>
+<pre>
+	UPDATE table  
+	SET column1 = expression1,  
+	    column2 = expression2,  
+	    ...  
+ 	   column_n = expression_n  
+	WHERE conditions; 
+</pre><br> 	
+<h4><u> Syntax 2 : ( Update Table by selecting rocords from another table )</u></h4><br>
+<pre>
+	UPDATE table1  
+	SET column1 = (SELECT expression1  
+               		FROM table2  
+               		WHERE conditions)  
+	WHERE conditions;  
+</pre><br>
+<h4><u> (v) DELETE Query :</u></h4><br>
+	In Oracle, DELETE statement is used to remove or delete a single record or multiple records from a table.<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	DELETE FROM table_name  
+	WHERE condition1
+	AND condition 2
+	........
+	AND condition n;   
+</pre><br>
+<h4><u> (vi) TRUNCATE Query :</u></h4><br>
+
+	<p>In Oracle, TRUNCATE TABLE statement is used to remove all records from a table. It works same as DELETE statement but without specifying a WHERE clause.</p>
+<p>It is generally used when you don't have to worry about rolling back. Once a table is truncated, it can't be rolled back. The TRUNCATE TABLE statement does not affect any 
+of the table's indexes, triggers or dependencies.</p><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	TRUNCATE TABLE [schema_name.]table_name 
+</pre>
+
+<h4><u> 6. What are different types of CLAUSES in Oracle SQL ?:</u></h4><br>
+
+<h4><u> (i) DISTINCT Clause :</u></h4><br>
+
+	Oracle DISTINCT clause is used to remove the duplicate records from the result set. It is only used with SELECT statement.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT DISTINCT expressions  
+	FROM tables  
+	WHERE conditions;  
+</pre><br>
+
+<h4><u> (ii) FROM Clause :</u></h4><br>
+	FROM clause is a mandatory clause in SELECT expression. It specifies the tables from which data is to be retrieved.
+ 
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expressions
+	FROM table_name...  
+	Expressions... 
+</pre><br>
+
+<h4><u> (iii) ORDER BY Clause :</u></h4><br>
+	In Oracle, ORDER BY Clause is used to sort or re-arrange the records in the result set. The ORDER BY clause is only used with SELECT statement.
+ 
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expressions  
+	FROM tables  
+	WHERE conditions  
+	ORDER BY expression [ ASC | DESC ];  
+</pre><br>
+
+<h4><u> (iii) GROUP BY Clause :</u></h4><br>
+	In Oracle GROUP BY clause is used with SELECT statement to collect data from multiple records and group the results by one or more columns.
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expression1, expression2, ... expression_n,   
+	aggregate_function (aggregate_expression)  
+	FROM tables  
+	WHERE conditions  
+	GROUP BY expression1, expression2, ... expression_n;   
+
+	 ----------------------------------------------------------
+	|* Aggregate Functions :- SUM, COUNT, MIN, MAX or AVG.     |
+	 ----------------------------------------------------------
+</pre>
+
+<h4><u> (iv) HAVING Clause :</u></h4><br>
+	In Oracle, HAVING Clause is used with GROUP BY Clause to restrict the groups of returned rows where condition is TRUE.
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expression1, expression2, ... expression_n,   
+	 aggregate_function (aggregate_expression)  
+	FROM tables  
+	WHERE conditions  
+	GROUP BY expression1, expression2, ... expression_n  
+	HAVING having_condition; 
+</pre><br>
+
+<h4><u> 7. Some other Key words we use in Oracle SQL ?:</u></h4><br>
+
+<h4><u> (i) ALIASES :</u></h4>
+	In Oracle, aliasing can also be done in column name as well as in table name. Aliasing is done to give a temporary name to a column or table.<br>
+ 
+ <h4><u> Syntax :</u></h4><br>
+ <pre>
+--&gt; For Column :       Column_name AS alias_name  
+--&gt; For Table    :       Table_name  alias_name  
+</pre><br>
+
+<h4><u> (ii) AND :</u></h4>
+	In Oracle, AND is used in select, insert, delete or update statement for checking two or more conditions.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	Where condition 1  
+	AND condition 2  
+	.........
+	AND condition n
+</pre><br>
+
+<h4><u> (iii) OR :</u></h4>
+	In Oracle, the OR operator is used to check more than one condition and returns the result when any one of the given condition is true.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	WHERE condition1  
+	OR condition2  
+	...  
+	OR condition_n;  
+</pre><br>
+
+<h4><u> (iv) BETWEEN :</u></h4>
+	In Oracle, BETWEEN is used to get the values from given range in select, insert, delete or update statement<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	Expression BETWEEN value1 AND value2;  
+</pre><br>
+
+<h4><u> (v) EXISTS :</u></h4>
+	In Oracle, exists clause is used with select, insert, update, delete statements. It is used to combine the queries and creating subquery.<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	Where exists (subquery) 
+</pre><br>
+
+<h4><u> (vi) IN :</u></h4>
+	In Oracle, In clause is used with SELECT, INSERT, UPDATE, or DELETE statement to decrease the use of multiple OR conditions.<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	expressions IN (value1, value2,.... value n) 
+</pre><br>
+
+<h4><u> (vii) IS NULL :</u></h4>
+	In oracle, IS NULL is used to check not null values. It is used with select, insert, update, and delete statements.<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	expression IS NULL 
+</pre><br>
+
+<h4><u> (viii) IS NOT NULL :</u></h4>
+	In oracle, IS NOT NULL is used to check not null values. It is used with select, insert, update, and delete statements.<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	expression IS NOT NULL 
+</pre><br>
+<h4><u> (ix) NOT :</u></h4>
+	In Oracle, NOT condition is used with SELECT, INSERT, UPDATE or DELETE statement. It is also called NOT operator. It is used to negate the given condition.
+<br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	NOT condition  
+</pre><br>
+
+<h4><u> (x) PRIMARY KEY :</u></h4>
+	In Oracle, Primary key is the column which has unique values, and it cannot be null. In a table, there can be only one primary key.
+<br>
+<h4><u> Syntax :</u></h4><br>
+<h4>---------> Using CREATE TABLE statement :</h4>
+<pre>
+	CREATE TABLE table_name  
+	(  
+	  column1 datatype null/not null,  
+	  column2 datatype null/not null,  
+	  ...  
+	  CONSTRAINT constraint_name PRIMARY KEY (column1, column2, ... column_n)  
+	);	
+</pre><br>
+<h4>---------> Using ALTER TABLE statement :</h4>
+<pre>
+	ALTER TABLE table_name  
+	ADD CONSTRAINT constraint_name PRIMARY KEY (column1, column2, ... column_n); 
+  -----------------------------
+ |  * Drop Primary Key :  |
+  -----------------------------
+</pre><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	ALTER TABLE table_name  
+	DROP CONSTRAINT constraint_name;  
+
+  --------------------------------
+ |  * Disable Primary Key :  |
+  --------------------------------
+</pre><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	ALTER TABLE table_name  
+	DISABLE CONSTRAINT constraint_name;  
+
+  -------------------------------
+ |  * Enable Primary Key :  |
+  -------------------------------
+</pre><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	ALTER TABLE table_name  
+	ENABLE CONSTRAINT constraint_name; 
+</pre><br>
+
+<h4><u> 8. What are different operators in Oracle SQL ?:</u></h4><br>
+ 
+<h4><u> (i) UNION Operator : </u></h4>
+	<p>In Oracle, UNION operator is used to combine the result sets of two or more Oracle SELECT statements. It combines the both SELECT statement and removes duplicate rows between them.
+Each SELECT statement within the UNION operator must have the same number of fields in the result sets with similar data types.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expression1, expression2, ... expression_n  
+	FROM table1  
+	WHERE conditions  
+            UNION  
+	SELECT expression1, expression2, ... expression_n  
+	FROM table2  
+	WHERE conditions;
+</pre><br>
+
+<h4><u> (ii) UNION ALL Operator :</u></h4>
+	<p>In Oracle, the UNION ALL operator is used to combine the result sets of 2 or more SELECT statements. It is different from UNION operator in a way that it does not remove 
+duplicate rows between the various SELECT statements. It returns all of the rows.</p>
+
+<p>Each SELECT statement within the UNION ALL must have the same number of fields in the result sets with similar data types.</p>
+
+	<p>* Difference between UNION and UNION ALL operators is UNION operator removes duplicate rows while UNION ALL operator does not remove duplicate rows.</p><br>
+<h4><u> Syntax :</u></h4><br> 
+<pre>
+	SELECT expression1, expression2, ... expression_n  
+	FROM table1  
+	WHERE conditions  
+	UNION ALL  
+	SELECT expression1, expression2, ... expression_n  
+	FROM table2  
+	WHERE conditions;
+</pre><br>
+
+<h4><u> (iii) INTERSECT Operator :</u></h4> 
+
+	In Oracle, INTERSECT Operator is used to return the results of 2 or more SELECT statement. It picks the common or intersecting records from compound SELECT queries.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expression1, expression2, ... expression_n  
+	FROM table1  
+	WHERE conditions  
+	INTERSECT  
+	SELECT expression1, expression2, ... expression_n  
+	FROM table2  
+	WHERE conditions; 
+</pre><br>
+ 
+<h4><u> (iv) MINUS Operator :</u></h4>
+
+	<p>In Oracle, MINUS operator is used to return all rows in the first SELECT statement that are not returned by the second SELECT statement.</p>
+<p>Each SELECT statement has a dataset and the MINUS operator returns all documents from the first dataset and then removes all documents from the second dataset.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT expression1, expression2, ... expression_n  
+	FROM table1  
+	WHERE conditions  
+	MINUS  
+	SELECT expression1, expression2, ... expression_n  
+	FROM table2  
+	WHERE conditions;  
+</pre><br>
+
+<h4><u> 9. What are JOINS and different types of JOINS in Oracle SQL ?:</u></h4><br>
+Join is a query that is used to combine rows from two or more tables, views, or materialized views. It retrieves data from multiple tables and creates a new table.
+<br>
+<h4><u> Join Conditions :</u></h4><br>
+<p>There may be at least one join condition either in the FROM clause or in the WHERE clause for joining two tables. It compares two columns from different tables and combines pair of rows, 
+each containing one row from each table, for which join condition is true.</p><br>
+
+
+<h4><u> (i) Inner Join</u></h4><br>
+Inner Join is the simplest and most common type of join. It is also known as simple join. It returns all rows from multiple tables where the join condition is met.<br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT columns  
+	FROM table1   
+	INNER JOIN table2  
+	ON table1.column = table2.column; 
+</pre><br>
+
+<h4><u> (ii) Outer Join</u></h4><br>
+In the SQL outer JOIN all the content of the both tables are integrated together either they are matched or not.<br>
+
+
+<h4><u>Outer join of two types:</u></h4><br>
+
+<h4>Left outer join (also known as left join):</h4>
+<p>this join returns all the rows from left table combine with the matching rows of the right table. If you get no matching in the right table it returns NULL values.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT columns  
+	FROM table1  
+	LEFT [OUTER] JOIN table2  
+	ON table1.column = table2.column;  
+</pre><br>
+<h4>Right outer join (also known as right join): </h4>
+<p>this join returns all the rows from right table are combined with the matching rows of left table .If you get no column matching in the left table .it returns null value.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT columns  
+	FROM table1  
+	RIGHT [OUTER] JOIN table2  
+	ON table1.column = table2.column; 
+</pre><br>
+<h4>Full Outer Join :</h4>
+ <p>The Full Outer Join returns all rows from the left hand table and right hand table. It places NULL where the join condition is not met.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT columns  
+	FROM table1  
+	FULL [OUTER] JOIN table2  
+	ON table1.column = table2.column; 
+</pre><br>
+
+<h4><u> (iii) Equi Join  :</u></h4><br>
+<p>Oracle Equi join returns the matching column values of the associated tables. It uses a comparison operator in the WHERE clause to refer equality.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT column_list   
+	FROM table1, table2....  
+	WHERE table1.column_name =  
+	table2.column_name;  
+
+---> Equijoin also can be performed by using JOIN keyword followed by ON keyword and then specifying names of the columns along with their associated tables to check equality.
+</pre><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT *  
+	FROM table1   
+	JOIN table2  
+	[ON (join_condition)]   
+</pre><br>
+
+<h4><u> (iv) Self Join</u></h4><br>
+
+<p>Self Join is a specific type of Join. In Self Join, a table is joined with itself (Unary relationship). A self join simply specifies that each rows of a table is combined with itself and every other row of the table.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT a.column_name, b.column_name...   
+	FROM table1 a, table1 b   
+	WHERE a.common_filed = b.common_field;    
+</pre><br>
+
+<h4><u> (v) Cross Join :</u></h4><br>
+
+<p>The CROSS JOIN specifies that all rows from first table join with all of the rows of second table. If there are "x" rows in table1 and "y" rows in table2 then the cross join result set have x*y rows. It normally happens when no matching join columns are specified.</p>
+
+<p>In simple words you can say that if two tables in a join query have no join condition, then the Oracle returns their Cartesian product.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	SELECT * 
+	FROM table1   
+	CROSS JOIN table2;  	
+	Or
+
+	SELECT * FROM table1, table2 
+
+	* Both the above syntax are same and used for Cartesian product. They provide similar result after execution.
+</pre><br>
+
+<h4><u> (vi) Anti Join :</u></h4><br>
+<p>Anti-join is used to make the queries run faster. It is a very powerful SQL construct Oracle offers for faster queries.</p>
+<p>Anti-join between two tables returns rows from the first table where no matches are found in the second table. It is opposite of a semi-join. </p>
+<p>An anti-join returns one copy of each row in the first table for which no match is found.</p>
+<p>Anti-joins are written using the NOT EXISTS or NOT IN constructs.</p><br>
+
+<h4><u> (vii) Semi Join :</u></h4><br>
+<p>Semi-join is introduced in Oracle 8.0. It provides an efficient method of performing a WHERE EXISTS sub-query.</p>
+<p>A semi-join returns one copy of each row in first table for which at least one match is found.</p>
+<p>Semi-joins are written using the EXISTS construct.</p><br>
+
+<h4><u> 10. Some other advanced topics in Oracle SQL ?:</u></h4><br>
+
+<h4><u> (i) Procedures</u></h4><br>
+<p>	A procedure is a group of PL/SQL statements that can be called by name. The call specification (sometimes called call spec) specifies a java method or a third-generation language routine so that it can be called from SQL and PL/SQL.</p><br>
+
+<h4><u> Create Procedure :</u></h4><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CREATE [OR REPLACE] PROCEDURE procedure_name  
+	    [ (parameter [,parameter]) ]  
+	IS  
+	    [declaration_section]  
+	BEGIN  
+	    executable_section  
+	[EXCEPTION  
+	    exception_section]  
+	END [procedure_name];  
+</pre><br>
+
+<h4><u> (ii) Functions </u></h4><br>
+<p>A function is a subprogram that is used to return a single value. You must declare and define a function before invoking it. It can be declared and defined at a same time or can be declared first and defined later in the same block.</p><br>
+
+<h4><u> CREATE function in Oracle :</u></h4><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CREATE [OR REPLACE] FUNCTION function_name  
+	   [ (parameter [,parameter]) ]  
+	RETURN return_datatype  
+	IS | AS  
+	 [declaration_section]  
+	BEGIN  
+ 	  executable_section  
+	[EXCEPTION  
+	   exception_section]  
+	END [function_name];  
+</pre><br>
+
+<h4>---> Oracle Drop Function : </h4>
+<p>If you want to remove your created function from the database, you should use the following syntax.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	DROP FUNCTION function_name;  
+</pre><br>
+
+<h4><u> (iii) Cursor</u></h4><br>
+	<p>A cursor is a pointer to a private SQL area that stores information about the processing of a SELECT or DML statements like INSERT, UPDATE, DELETE or MERGE.</p>
+<p>Cursor is a mechanism which facilitates you to assign a name to a SELECT statement and manipulate the information within that SQL statement.</p><br>
+
+
+<h4>How to declare cursor :</h4><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CURSOR cursor_name  
+	IS  
+	  SELECT_statement;   
+</pre><br>
+
+<h4> How to open a cursor :</h4>
+<p>	After the declaration of the cursor, you have to use the open statement to open the cursor.</p><br>
+	
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	OPEN cursor_name;  
+Fetching rows from cursor :
+	This statement is used after declaring and opening your cursor. It is used to fetch rows from cursor.
+</pre><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	FETCH cursor_name INTO variable_list;   
+Closing a cursor 
+	CLOSE statement is a final step and it is used to close the cursor once you have finished using it.
+</pre><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CLOSE cursor_name;  
+</pre><br>
+
+<h4><u> Cursor within cursor :</u></h4><br>
+<p>	It is also possible to declare a cursor within a cursor. the following example specifies how to declare a cursor within a cursor.</p>
+<p>In this example, there is a cursor named get_tables that retrieves the owner and table_name values. These values are then used in a second cursor called get_columns.</p><br>
+
+<h4><u> Example :</u></h4><br>
+<pre>
+CREATE OR REPLACE PROCEDURE MULTIPLE_CURSORS_PROC is  
+   v_owner varchar2(40);  
+   v_table_name varchar2(40);  
+   v_column_name varchar2(100);  
+     
+   /* First cursor */  
+   CURSOR get_tables IS  
+     SELECT DISTINCT tbl.owner, tbl.table_name  
+     FROM all_tables tbl  
+     WHERE tbl.owner = 'SYSTEM';  
+       
+   /* Second cursor */  
+   CURSOR get_columns IS  
+     SELECT DISTINCT col.column_name  
+     FROM all_tab_columns col  
+     WHERE col.owner = v_owner  
+     AND col.table_name = v_table_name;  
+       
+   BEGIN  
+     
+   -- Open first cursor  
+   OPEN get_tables;  
+   LOOP  
+      FETCH get_tables INTO v_owner, v_table_name;  
+        
+      -- Open second cursor  
+      OPEN get_columns;  
+      LOOP  
+         FETCH get_columns INTO v_column_name;  
+      END LOOP;  
+      CLOSE get_columns;  
+   END LOOP;  
+   CLOSE get_tables;  
+   EXCEPTION  
+   WHEN OTHERS THEN  
+ raise_application_error(-20001,'An error was encountered - '||SQLCODE||' -ERROR- '||SQLERRM);  
+end MULTIPLE_CURSORS_PROC;  
+</pre><br>
+
+<h4><u> Output :</u></h4><br>
+<pre>
+Procedure created.
+0.16 seconds
+</pre><br>
+
+<h4> Note:</h4>
+<p> You have to continuously open and close the second cursor each time a new record is retrieved from the first cursor. That way, the second cursor will use the new variable values from the first cursor.</p><br>
+	
+<h4><u> (iv) Trigger :</u></h4><br>
+<p>In Oracle, you can define procedures that are implicitly executed when an INSERT, UPDATE or DELETE statement is issued against the associated table. These procedures are called database triggers.</p><br>
+
+<h4>--->Oracle Before INSERT/UPDATE/DELETE Trigger :</h4>
+<p>This statement specifies that Oracle will fire this trigger BEFORE the INSERT/UPDATE or DELETE operation is executed.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CREATE [ OR REPLACE ] TRIGGER trigger_name  
+	BEFORE INSERT or UPDATE or DELETE  
+ 	 ON table_name  
+  	  [ FOR EACH ROW ]  
+	DECLARE  
+   	  -- variable declarations  
+	BEGIN  
+      -- trigger code  
+	EXCEPTION  
+   	  WHEN ...  
+      -- exception handling  
+	END;  
+</pre><br>
+
+<h4>----> Oracle After INSERT/UPDATE/DELETE Trigger</h4>
+<p>	This statement specifies that Oracle will fire this trigger AFTER the INSERT/UPDATE or DELETE operation is executed.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CREATE [ OR REPLACE ] TRIGGER trigger_name  
+	AFTER INSERT or UPDATE or DELETE  
+ 	 ON table_name  
+  	  [ FOR EACH ROW ]  
+	DECLARE  
+   		-- variable declarations  
+	BEGIN  
+   		-- trigger code  
+	EXCEPTION  
+   		WHEN ...  
+   		-- exception handling  
+	END;  
+</pre><br>
+
+<h4>----> Oracle DROP Trigger :</h4>
+<p>	In Oracle, DROP TRIGGER statement is used to drop the trigger if you find that you need to remove it from the database.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+DROP TRIGGER trigger_name;   
+</pre><br>
+
+<h4>----> Oracle DISABLE Trigger :</h4>
+<p>	The ALTER TRIGGER statement is used to disable a trigger.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+ALTER TRIGGER trigger_name DISABLE [ALL TRIGGERS];   
+</pre><br>
+
+<h4>----> Oracle ENABLE Trigger</h4>
+<p>	The ALTER TRIGGER statement is used to enable a trigger.</p><br>
+
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	ALTER TRIGGER trigger_name ENABLE [ALL TRIGGERS];   
+</pre><br>
+
+<h4><u> (v) View :</u></h4><br>
+	<p>In Oracle, view is a virtual table that does not physically exist. It is stored in Oracle data dictionary and do not store any data. It can be executed when called.</p><br>
+<p>A view is created by a query joining one or more tables.</p><br>
+
+<h4><u> Syntaxes :</u></h4><br>
+<h4>---->Creating a View :</h4><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CREATE VIEW view_name AS  
+	SELECT columns  
+	FROM tables  
+	WHERE conditions;  
+</pre><br>
+
+<h4>---->Updating a View :</h4>
+	<p>In Oracle, the CREATE OR REPLACE VIEW statement is used to modify the definition of an Oracle VIEW without dropping it.</p><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	CREATE OR REPLACE VIEW view_name AS  
+	  SELECT columns  
+	  FROM table  
+	  WHERE conditions;   
+</pre><br>	
+
+<h4> ---->Oracle DROP VIEW :</h4>
+	<p>The DROP VIEW statement is used to remove or delete the VIEW completely.</p><br>
+<h4><u> Syntax :</u></h4><br>
+<pre>
+	DROP VIEW view_name;  
+</pre><br>  
+</div>    
+<a href="rules for sql quiz.html"> <input type="button" value="Start quiz" class="btns"></a><br><br>
+
+
+<footer>
+    <p>2021 All Rights Reserved.Free Mouritech Skill Builder Templates</p>
+ </footer>    
+
+             </div>
+     </body>
+ </html>
+ 
+ 

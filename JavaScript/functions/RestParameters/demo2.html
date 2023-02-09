@@ -1,0 +1,12 @@
+<script>
+    function fun_one(arg1, ...arg2) {
+        console.log(arg1, arg2);
+
+    }
+    fun_one();
+    fun_one("Hello1", "Hello2");
+    fun_one("Hello", undefined);
+    fun_one(undefined, undefined);
+    fun_one("Hello1", "Hello2", "Hello3");
+    fun_one(null, null);
+</script>

@@ -1,0 +1,78 @@
+<!-- <h1>InterPolation</h1>
+<p>{{name}}</p>
+<p>{{name.length}}</p>
+<p>Welcome to {{name}}</p>
+<p>{{"Welcome To :" + name}}</p>
+<p>{{interpolation()}}</p>
+<p>{{name.toUpperCase()}}</p>
+<p>{{name.toLowerCase()}}</p>
+<p>{{baseUrl}}</p>
+<h1>property binding</h1>
+<input type="text" [disabled]="isDisabled" id="{{courseId}}" value="anguler">
+<input type="text" [id]="courseId" value="anguler">
+
+<h1>Class Binding</h1>
+
+<p [ngClass]="group">Welcome Rajitha</p>
+<h1>Style Binding</h1>
+<p [style.color]="'red'">Nageswari</p>
+<p [style.color]="myColor">Lalith</p>
+<p [style.color]="required ? 'orange' : 'green'">Helloo</p>
+<p [ngStyle]="myStyles">style binding</p>
+
+<h1>Event Binding</h1>
+
+<button type="button" (click)="displayMsg()">ClickHere</button>
+<h2>{{myName}}</h2>
+<h1>Template Reference variable</h1>
+<input type="text" #msg>
+<button type="button" (click)="displayDom(msg.value)">Click</button>
+<h1>Two way data Binding</h1>
+<input type="text" [(ngModel)]="data">
+<button type="button">Click</button>
+{{data}}
+
+<h1>Structural Directives</h1>
+<h1 *ngIf="status ; else elseBlock">Welcome</h1>
+<ng-template #elseBlock>
+    <p>Sanepalli Rajitha</p>
+</ng-template>
+
+<h1>ng Switch directive</h1>
+<div [ngSwitch]="myChoice">
+    <div class="switchCase">
+        <div *ngSwitchCase="'one'">
+            First block
+        </div>
+        <div *ngSwitchCase="'two'">
+            second block
+        </div>
+        <div *ngSwitchDefault>
+            default block
+        </div>
+    </div>
+
+</div>
+<h1>ng For direcive</h1>
+<div *ngFor="let x of subjects ; index as i">
+    <h2>{{i}}-{{x}}</h2>
+
+</div>
+
+<h1>Component Interaction</h1>
+<h1>{{fromParent}}</h1>
+<button (click)="fireEvent()">Click</button>
+
+<h1>Pipes</h1>
+<h2>{{fullNmae | lowercase}}</h2>
+<h2>{{fullNmae | uppercase}}</h2>
+<h2>{{fullNmae | titlecase}}</h2>
+<h2>{{fullNmae | slice: 3}}</h2>
+<h2>{{fullNmae | slice: 3 : 5}}</h2>
+<h2>{{myStyles | json}}</h2>
+<h2>{{date}}</h2>
+<h2>{{date | date:'short'}}</h2>
+<h2>{{date | date:'shortTime'}}</h2>
+<h2>{{date | date:'medium'}}</h2>
+<h2>{{date | date:'mediumDate'}}</h2>
+<h2>{{date | date:'mediumTime'}}</h2> -->

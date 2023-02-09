@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Sql Api</title>
+</head>
+<script>
+    let dbobj = openDatabase("mouri", 1.0, "mouritech-classes", 2 * 1024 * 1024);
+    dbobj.transaction(function (tx) {
+        tx.executeSql("create table products(p_id unique,p_name varchar(20),p_cost number,p_image varchar(20))")
+        tx.executeSql("insert into products (p_id ,p_name,p_cost,p1_image) values(1,'shirt1',10000,'https://m.media-amazon.com/images/I/71D9ImsvEtL._p1_.jpg')");
+        tx.executeSql("insert into products (p_id ,p_name,p_cost,p2_image) values(2,'shirt2',10000,'https://m.media-amazon.com/images/I/71D9ImsvEtL._p2_.jpg')");
+        tx.executeSql("insert into products (p_id ,p_name,p_cost,p3_image) values(3,'shirt3',10000,'https://m.media-amazon.com/images/I/71D9ImsvEtL._p3_.jpg')");
+        tx.executeSql("insert into products (p_id ,p_name,p_cost,p4_image) values(4,'shirt4',10000,'https://m.media-amazon.com/images/I/71D9ImsvEtL._p4_.jpg')");
+        tx.executeSql("insert into products (p_id ,p_name,p_cost,p5_image) values(5,'shirt5',10000,'https://m.media-amazon.com/images/I/71D9ImsvEtL._p5_.jpg')");
+        tx.executeSql("insert into products (p_id ,p_name,p_cost,p6_image) values(6,'shirt6',10000,'https://m.media-amazon.com/images/I/71D9ImsvEtL._p6_.jpg')");
+
+    });
+    dbobj.transaction(function (tx) {
+        document.write(`<table border="1" 
+        align="center"
+        cellpadding="10px"
+        cellspacing="10px"> 
+            <tr>
+                <th>P_ID</th>
+                <th>P_NAME</th>
+                <th>P_COST</th>
+                <th>P_IMAGE</th>
+                </tr>`);
+        tx.executeSql("select * from products", [], function (tx, result) {
+            //  console.log(result.rows[1]);
+            for (let i = 0; i < result.rows.length; i++) {
+                let rec = result.rows[i];
+                //console.log(rec);
+                document.write(`
+             <tr>
+                <td>${rec.p_id}</td>
+                <td>${rec.p_name}</td>
+                <td>${rec.p_cost}</td>
+                <td><img width="100px" height="100px" src=${rec.p_image}></td>
+                </tr>
+
+
+             `);
+            }
+            document.write(`</table>`);
+
+
+
+        });
+
+
+    });
+</script>
+
+</html>

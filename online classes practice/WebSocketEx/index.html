@@ -1,0 +1,16 @@
+<article id="msg"></article>
+<script>
+
+    if (window.WebSocket) {
+        let socket = new WebSocket("ws://localhost:8080");
+        socket.onopen = function () {
+            socket.send("Welcome to html5 chat application");
+        }
+        socket.onmessage = function (msges) {
+            document.getElementById("msg").innerHTML += msges.data + "<br>";
+        }
+        socket.onerror = function (err) {
+            console.log("error");
+        }
+    }
+</script>

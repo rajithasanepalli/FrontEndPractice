@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Login</legend>
+        <article>
+            <label>Email</label>
+            <input type="email" id="email">
+        </article>
+        <article>
+            <label>Password</label>
+            <input type="password" id="password">
+        </article><br>
+        <article>
+            <button type="button" onclick="store()">Store</button>
+            <button type="button" onclick="read()">Read</button>
+            <button type="button" onclick="remove()">Remove</button>
+        </article>
+        <article>
+            <p id="result"></p>
+        </article>
+    </fieldset>
+</body>
+<script>
+    function store() {
+        let obj = {
+            "email": document.getElementById("email").value,
+            "password": document.getElementById("password").value
+        }
+        window.localStorage.setItem("login-details", JSON.stringify(obj));
+    }
+    function read() {
+        let str = window.localStorage.getItem("login-details");
+        let obj1 = JSON.parse(str);
+        document.getElementById("result").innerHTML = obj1.email + "-----" + obj1.password;
+    }
+    function remove() {
+        window.localStorage.removeItem("login-details");
+        document.getElementById("result").innerHTML = "";
+    }
+</script>
+
+</html>

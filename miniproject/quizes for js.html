@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Quiz for js</title>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+   
+    
+    <body>
+
+ <div id="quizdiv">
+            <header><br>
+                <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png" class="image1">
+                <b>MT SKILL BUILDER</b>
+            </header><br>
+
+
+<div id="subquiz">
+    <div style="font-weight: bold;" id="quiz-time-left"></div>
+    <script type="text/javascript">
+    var total_sec=60*2;
+    var c_min=parseInt(total_sec/60);
+    var c_sec=parseInt(total_sec/60);
+    function CheckTime(){
+        document.getElementById("quiz-time-left").innerHTML
+        ='Time Left:'+c_min+'min'+c_sec+'sec';
+        if(total_sec<=0){
+            setTimeout('document.quiz.submit()',1);
+             }
+             else{
+                 total_sec=total_sec-1;
+                 c_min=parseInt(total_sec/60);
+                 c_sec=parseInt(total_sec%60);
+                 setTimeout("CheckTime()",1000); 
+             }
+    }
+    setTimeout("CheckTime()",1000);
+
+    </script>
+    <form method="post" name="quiz"></form>
+   
+    
+      1.Which of the following is correct about features of JavaScript?<br><br>
+        <input type="radio" name="question1" class="radio">JavaScript is is complementary to and integrated with HTML.<br>
+        <input type="radio" name="question1" class="radio">JavaScript is open and cross-platform.<br>
+        <input type="radio" name="question1" id="correct1" class="radio">Both of the above.<br>
+        <input type="radio" name="question1" class="radio">All of the above. <br><br>
+    
+
+        2. Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?<br><br>
+        <input type="radio" name="question2" class="radio">alertbox(“GeeksforGeeks”);<br>
+        <input type="radio" name="question2" class="radio">msg(“GeeksforGeeks”);<br>
+        <input type="radio" name="question2" class="radio">msgbox(“GeeksforGeeks”);<br>
+        <input type="radio" name="question2" id="correct2" class="radio">alert(“GeeksforGeeks”);<br><br>
+
+        
+        3. What is the HTML tag under which one can write the JavaScript code?<br><br>
+        <input type="radio" name="question3" class="radio">  &lt;javascript&gt;<br>
+        <input type="radio" name="question3" class="radio">&lt;scripted&gt;<br>
+        <input type="radio" name="question3" id="correct3" class="radio">&lt;script&gt;<br>
+        <input type="radio" name="question3" class="radio">&lt;js&gt;<br><br>
+
+         
+        4. What is the correct syntax for referring to an external script called “geek.js”?<br><br>
+        <input type="radio" name="question4" id="correct4" class="radio">&lt;script src=”geek.js”&gt;<br>
+        <input type="radio" name="question4" class="radio">&lt;script href=”geek.js”&gt;<br>
+        <input type="radio" name="question4" class="radio">&lt;script ref=”geek.js”&gt;<br>
+        <input type="radio" name="question4" class="radio">&lt;script name=”geek.js”&gt;<br><br>
+
+         
+        5.Which of the following is the correct event handler to detect a mouse click on a link?<br><br>
+        <input type="radio" name="question5" class="radio">onMouseUp<br>
+        <input type="radio" name="question5" class="radio">onLink<br>
+        <input type="radio" name="question5" id="correct5" class="radio">onClick<br>
+        <input type="radio" name="question5" class="radio">None of this<br><br>
+       
+ <input type="submit" name="submit"  value="Submit Quiz" class="btn3" onclick="result()">
+ <script type="text/javascript">
+
+        function result(){
+            var score=0;
+            if (document.getElementById('correct1').checked)
+            {
+                score++;
+            }
+              if (document.getElementById('correct2').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('correct3').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('correct4').checked)
+            {
+                score++;
+            }
+
+            if (document.getElementById('correct5').checked)
+            {
+                score++;
+            }
+
+            alert("Your score is:"+score);
+            if (score >3){
+            alert(" Congratulations you are eligible for the next course ");
+            window.location.href="file:///C:/Users/rajithas/Desktop/miniproject/COURSES%20ENROLLMENT.html";
+        } 
+         else{
+            alert("Sorry you are not eligible for the next course")
+            window.location.href="file:///C:/Users/rajithas/Desktop/miniproject/LOGIN.html";
+
+
+        }
+ }
+        </script>
+        
+           </div>
+           <br><br>
+        
+<footer>
+    <p>2021 All Rights Reserved.Free Mouritech Skill Builder Templates</p>
+ </footer>
+        </div>
+        
+
+  </body>
+</html>

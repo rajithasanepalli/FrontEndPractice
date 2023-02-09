@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drag And Drop</title>
+    <style>
+        article {
+            width: 500px;
+            height: 250px;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        function drag(event) {
+            event.dataTransfer.setData("key1", event.target.id);
+        }
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        function drop(event) {
+            event.preventDefault();
+            let id = event.dataTransfer.getData("key1");
+            event.target.appendChild(document.getElementById(id));
+        }
+    </script>
+</head>
+
+<body>
+    <article id="article" ondragover="allowDrop(event)" ondrop="drop(event)">
+    </article><br><br>
+    <img id="logo" src="shoes.png" width="200px" height="200px" draggable="true" ondragstart="drag(event)">
+</body>
+
+</html>

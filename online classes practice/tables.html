@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+        <style>
+            table{
+                width:100%;
+            }
+            table,th,td{
+                border: 1px solid green;
+                border-collapse: collapse;
+            }
+            thead{
+                height: 100px;
+                vertical-align: top;
+                color: white;
+                background: linear-gradient(45deg,red,black);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            td{
+                height: 30px;
+                text-align: center;
+            }
+            tr:nth-child(odd):hover{
+                background-color:green;
+                color:white;
+            }
+            tr:nth-child(even):hover{
+                background-color: black;
+                color: white;
+            }
+            caption{
+                caption-side: bottom;
+                color: red;
+                background-color: yellow;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+          
+
+        </style>
+    </head>
+    <body>
+        <div style="overflow-x: auto;">
+        <table>
+            <caption>Ashok IT</caption>
+            <thead>
+                <tr>
+                    <th>SNO</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rajitha</td>
+                    <td>Maths</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lalitha</td>
+                    <td>Maths</td>
+                    <td>60</td>
+                  
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </body>
+</html>

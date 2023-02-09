@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+.bg-image{
+   background-image: url("C:\Users\rajithas\Desktop\AngularInterview\demo\helloworld\src\assets\pictures\bg.png");
+    height: 625px;
+    width: 100%;
+}

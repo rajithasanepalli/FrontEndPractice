@@ -1,0 +1,77 @@
+<div class="card">
+    <div class="card-body">
+        <form>
+            <mat-form-field class="col-md-6">
+                <mat-label>Description</mat-label>
+                <input matInput maxlength="255" placeholder="Description">
+            </mat-form-field>
+            <mat-form-field class="col-md-6">
+                <mat-label>Signatory</mat-label>
+                <input matInput placeholder="Signatory" maxlength="30" required>
+            </mat-form-field>
+            <mat-form-field class="col-md-6">
+                <mat-label>Routing Number</mat-label>
+                <input matInput placeholder="Routing Number" minlength="9" maxlength="9" required>
+
+            </mat-form-field>
+            <mat-form-field class="col-md-6">
+                <mat-label>Account Number</mat-label>
+                <input matInput placeholder="Account Number" maxlength="17" required>
+
+            </mat-form-field>
+            <mat-form-field class="col-md-6">
+                <mat-label>Account Type</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let x of filterOptions | async" [value]="x">
+                        {{x}}
+                    </mat-option>
+                </mat-select>
+
+            </mat-form-field>
+            <mat-form-field class="col-md-6">
+                <mat-label>AutoComplete</mat-label>
+                <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let x of filterOptions | async" [value]="x">
+                        {{x}}
+
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            <mat-checkbox class="col-md-6" labelPosition="before" color="warn">Subscrime Me</mat-checkbox>
+            <mat-radio-group class="col-md-6">
+                <mat-label>Gender</mat-label>
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field class="col-md-6">
+                <mat-label>Select dob</mat-label>
+                <input matInput [matDatepicker]="myDatePicker" [matDatepickerFilter]="dateFilter">
+                <mat-datepicker-toggle matSuffix [for]="myDatePicker">
+                    <mat-datepicker #myDatePicker></mat-datepicker>
+                </mat-datepicker-toggle>
+
+            </mat-form-field>
+
+            <div>
+                <button mat-button class="btn btn-outline-primary" type="submit">Submit</button>
+
+            </div>
+            <div>
+                <button mat-button class="btn btn-outline-danger" matTooltip="welcome Raji" matTooltipPosition="below"
+                    matTooltipShowDelay="1000" matTooltipHideDelay="1000" type="submit">ToolTip</button>
+            </div>
+
+            <div>
+                <button mat-button class="btn btn-outline-primary"
+                    (click)="openSnackBar('Hi This is Snack Bar' ,'Dismiss')">SnackBar</button>
+
+            </div>
+            <div>
+                <button mat-button class="btn btn-outline-primary" (click)="openDialog()">MatDialog</button>
+
+
+            </div>
+        </form>
+    </div>
+</div>

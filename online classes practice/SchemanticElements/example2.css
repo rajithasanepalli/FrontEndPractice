@@ -1,0 +1,32 @@
+aside{
+    width: 15rem;
+    background: linear-gradient(45deg, red,black);
+    height: 100vh;
+    text-align: center;
+    /* float: right; */
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border:15px solid gray;
+    margin-top: 30px;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    display: block;
+    color:red;
+    background-color: yellow;
+    padding: 1rem;
+    border: 1px solid red;
+    border-radius: 20px;
+    margin: 30px 5px;
+    text-decoration: none;
+
+}
+a:hover{
+    border: 1px solid gray;
+}

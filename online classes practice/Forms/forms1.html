@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+</head>
+
+<body>
+    <fieldset style="width: 30%; margin:30px  auto;">
+        <legend style="text-align: center;">Register Form</legend>
+        <form action="https://www.mouritech.com/#section-welcome" method="post">
+
+            <p>
+                <label>Title</label><br>
+                <label>
+                    <input type="radio" name="title" value="mr">MR
+                </label>
+                <label>
+                    <input type="radio" name="title" value="mrs">MRS
+                </label>
+                <label>
+                    <input type="radio" name="title" value="miss">MISS
+                </label>
+            </p>
+            <p>
+                <label>First Name</label><br>
+                <input type="text" name="first_name">
+            </p>
+
+            <p>
+                <label>Last Name</label><br>
+                <input type="text" name="last_name">
+            </p>
+
+            <p>
+                <label>Emaile</label><br>
+                <input type="email" name="user_email">
+            </p>
+            <p>
+                <label>Mobile</label><br>
+                <input type="tel" name="user_mobile">
+            </p>
+
+            <p>
+                <label>Password</label><br>
+                <input type="password" name="user_password">
+            </p>
+            <p>
+                <label>Course</label><br>
+                <select>
+                    <option>Java FullStack</option>
+                    <option>UI FullStack</option>
+                    <option>Net FullStack</option>
+                    <option>DataScience FullStack</option>
+                </select>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" value="terms">
+                    I Agree<a href="https://www.mouritech.com/#section-welcome">Terms&Conditions</a>
+                </label>
+            </p>
+            <p>
+                <button>Sign Up</button>
+                <button type="reset">Reset Form</button>
+            </p>
+        </form>
+    </fieldset>
+</body>
+
+</html>

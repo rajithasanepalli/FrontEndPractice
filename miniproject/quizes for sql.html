@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Quiz for js</title>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+   
+    
+    <body>
+
+ <div id="quizdiv">
+            <header><br>
+                <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png" class="image1">
+                <b>MT SKILL BUILDER</b>
+            </header><br>
+
+
+<div id="subquiz">
+    <div style="font-weight: bold;" id="quiz-time-left"></div>
+    <script type="text/javascript">
+    var total_sec=60*2;
+    var c_min=parseInt(total_sec/60);
+    var c_sec=parseInt(total_sec/60);
+    function CheckTime(){
+        document.getElementById("quiz-time-left").innerHTML
+        ='Time Left:'+c_min+'min'+c_sec+'sec';
+        if(total_sec<=0){
+            setTimeout('document.quiz.submit()',1);
+             }
+             else{
+                 total_sec=total_sec-1;
+                 c_min=parseInt(total_sec/60);
+                 c_sec=parseInt(total_sec%60);
+                 setTimeout("CheckTime()",1000); 
+             }
+    }
+    setTimeout("CheckTime()",1000);
+
+    </script>
+    <form method="post" name="quiz"></form>
+   
+    
+      1.What is the full form of SQL?<br><br>
+        <input type="radio" name="question1" class="radio">Structured Query List.<br>
+        <input type="radio" name="question1" class="radio">Sample Query Language.<br>
+        <input type="radio" name="question1" id="correct1" class="radio">Structure Query Language.<br>
+        <input type="radio" name="question1" class="radio">None of these. <br><br>
+    
+
+        2. Which of the following is not a valid SQL type?<br><br>
+        <input type="radio" name="question2" class="radio">FLOAT<br>
+        <input type="radio" name="question2" class="radio">NUMERIC<br>
+        <input type="radio" name="question2" class="radio">CHARACTER<br>
+        <input type="radio" name="question2" id="correct2" class="radio">DECIMAL<br><br>
+
+        
+        3. Which of the following is not a DDL command?<br><br>
+        <input type="radio" name="question3" class="radio">TRUNCATE<br>
+        <input type="radio" name="question3" class="radio">ALTER<br>
+        <input type="radio" name="question3" id="correct3" class="radio">UPDATE<br>
+        <input type="radio" name="question3" class="radio">CREATE<br><br>
+
+         
+        4. Which of the following are TCL commands?<br><br>
+        <input type="radio" name="question4" id="correct4" class="radio">COMMIT and ROLLBACK<br>
+        <input type="radio" name="question4" class="radio">UPDATE and TRUNCATE<br>
+        <input type="radio" name="question4" class="radio">SELECT and INSERT<br>
+        <input type="radio" name="question4" class="radio">GRANT and REVOKE<br><br>
+
+         
+        5.Which operator is used to compare a value to a specified list of values?<br><br>
+        <input type="radio" name="question5" class="radio">ANY<br>
+        <input type="radio" name="question5" class="radio">BETWEEN<br>
+        <input type="radio" name="question5" id="correct5" class="radio">IN<br>
+        <input type="radio" name="question5" class="radio">ALL<br><br>
+       
+ <input type="submit" name="submit"  value="Submit Quiz" class="btn3" onclick="result()">
+ <script type="text/javascript">
+
+        function result(){
+            var score=0;
+            if (document.getElementById('correct1').checked)
+            {
+                score++;
+            }
+              if (document.getElementById('correct2').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('correct3').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('correct4').checked)
+            {
+                score++;
+            }
+
+            if (document.getElementById('correct5').checked)
+            {
+                score++;
+            }
+
+            alert("Your score is:"+score);
+            if (score >3){
+            alert(" Congratulations you are eligible for the next course ");
+            window.location.href="file:///C:/Users/rajithas/Desktop/miniproject/COURSES%20ENROLLMENT.html";
+        } 
+         else{
+            alert("Sorry you are not eligible for the next course")
+            window.location.href="file:///C:/Users/rajithas/Desktop/miniproject/LOGIN.html";
+
+
+        }
+ }
+        </script>
+        
+           </div>
+           <br><br>
+        
+<footer>
+    <p>2021 All Rights Reserved.Free Mouritech Skill Builder Templates</p>
+ </footer>
+        </div>
+        
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<script>
+    let arr = [];
+    function fun_one() {
+        return "Hello";
+    }
+    for (let i = 0; i < 5; i++) {
+        arr.push(fun_one);
+
+    }
+    for (let j = 0; j < arr.length; j++) {
+        console.log(arr[j]());
+
+    }
+</script>

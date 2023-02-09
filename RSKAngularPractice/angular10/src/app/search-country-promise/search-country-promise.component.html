@@ -1,0 +1,12 @@
+<div>
+    <h2>Search for Country</h2>
+    <input type="text" #country (keyup)="searchCountry(country.value)">
+
+</div><br>
+<div>
+    <ul>
+        <li *ngFor="let x of countries">
+            {{x}}
+        </li>
+    </ul>
+</div>

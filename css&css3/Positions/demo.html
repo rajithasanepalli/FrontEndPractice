@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Positions</title>
+    <style>
+        .common {
+            height: 50px;
+
+            color: white;
+        }
+
+        .first {
+            background-color: red;
+
+
+        }
+
+        .second {
+            background-color: blue;
+
+            position: absolute;
+            left: 10px;
+            top: 10px;
+
+
+        }
+
+        .third {
+            background-color: green;
+
+        }
+
+        .test {
+            background-color: pink;
+        }
+
+        .parent {
+            position: relative;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="common test">Hello</div>
+    <div class="parent">
+        <div class="common first">1</div>
+        <div class="common second">2</div>
+        <div class="common third">3</div>
+    </div>
+</body>
+
+</html>

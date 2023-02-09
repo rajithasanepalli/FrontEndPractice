@@ -1,0 +1,535 @@
+<html>
+    <head>
+        <title>JS document notes</title>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="maindiv5">
+            <header id="first">
+                <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png" class="image1">
+                <b>MT SKILL BUILDER</b>
+            </header><br>
+            <b class="first"><u>JavaScript NOTES</u></b>
+            <div class="c">
+            <h4><u>1)What is JavaScript?:</u></h4><br>
+            <p>JavaScript (js) is a light-weight object-oriented programming language which is used by several websites for scripting the webpages.</p>
+
+            <p>It is an interpreted, full-fledged programming language that enables dynamic interactivity on websites when applied to an HTML document.</p>
+            <p>It was introduced in the year 1995 for adding programs to the webpages in the Netscape Navigator browser.</p>
+            <p>Since then, it has been adopted by all other graphical web browsers. </p>
+            <p>With JavaScript, users can build modern web applications to interact directly without reloading the page every time.</p> 
+            The traditional website uses js to provide several forms of interactivity and simplicity.</p>
+            <p>Although, JavaScript has no connectivity with Java programming language.</p>
+            <p>The name was suggested and provided in the times when Java was gaining popularity in the market.
+            In addition to web browsers, databases such as CouchDB and MongoDB uses JavaScript as their scripting and query language.</p><br>
+
+           <h4><u>2)Features of JavaScript ?:</u></h4><br>
+            There are following features of JavaScript:
+    
+                    <p>1 All popular web browsers support JavaScript as they provide built-in execution environments.</p>
+                    <p>2 JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.</p>
+                    <p>3 JavaScript is a weakly typed language, where certain types are implicitly cast (depending on the operation).</p>
+                    <p>4 JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.</p>
+                    <p>5 It is a light-weighted and interpreted language.</p>
+                    <p>6 It is a case-sensitive language.</p>
+                    <p>7 JavaScript is supportable in several operating systems including, Windows, macOS, etc.</p>
+                    <p>8 It provides good control to the users over the web browsers.</p><br>
+
+    
+
+<h4 class="secondh"><u>3)History of JavaScript ?:</u></h4><br>
+In 1993, Mosaic, the first popular web browser, came into existence. In the year 1994, Netscape was founded by Marc Andreessen.
+He realized that the web needed to become more dynamic. 
+Thus, a 'glue language' was believed to be provided to HTML to make web designing easy for designers and part-time programmers.
+Consequently, in 1995, the company recruited Brendan Eich intending to implement and embed Scheme programming language to the browser.
+But, before Brendan could start, the company merged with Sun Microsystems for adding Java into its Navigator so that it could compete with Microsoft over the web technologies and platforms.
+Now, two languages were there: Java and the scripting language. Further, Netscape decided to give a similar name to the scripting language as Java's. 
+It led to 'Javascript'. Finally, in May 1995, Marc Andreessen coined the first code of Javascript named 'Mocha'. Later, the marketing team replaced the name with 'LiveScript'.
+But, due to trademark reasons and certain other reasons, in December 1995, the language was finally renamed to 'JavaScript'. From then, JavaScript came into existence.<br>
+
+<h4><u>Application of JavaScript ?:</u></h4><br>
+
+JavaScript is used to create interactive websites. It is mainly used for:<br>
+
+<p>Client-side validation,</p>
+<p>Dynamic drop-down menus,</p>
+<p>Displaying date and time,</p>
+<p>Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),</p>
+<p>Displaying clocks etc.</p><br>
+
+    <h4><u>JavaScript Example:</u></h4><br>
+    <pre>
+        &lt;script&gt;  
+            document.write("Hello JavaScript by JavaScript");  
+        &lt;/script&gt;  
+    </pre>
+   
+    <p>JavaScript Example</p>
+             <p>Within body tag</p>
+             <p>Within head tag</p>
+    Javascript example is easy to code. JavaScript provides 3 places to put the JavaScript code: within body tag, within head tag and external JavaScript file.<br>
+    <br>
+    <h4><u>Let’s create the first JavaScript example.</u></h4><br>
+    <pre>
+        &lt;script type="text/javascript"&gt;  
+            document.write("JavaScript is a simple language for javatpoint learners");  
+        &lt;/script&gt;  
+    </pre>
+    <p>The script tag specifies that we are using JavaScript.</p>
+
+    <p>The text/javascript is the content type that provides information to the browser about the data.</p>
+
+<p>The document.write() function is used to display dynamic content through JavaScript. We will learn about document object in detail later.</p>
+
+    <p>3 Places to put JavaScript code</p>
+    <p>Between the body tag of html</p>
+    <p>Between the head tag of html</p><br>
+
+    <h4><u>In .js file (external javaScript):</u></h4><br>
+    <h4><u>1) JavaScript Example :</u></h4>code between the body tag
+
+<p>In the above example, we have displayed the dynamic content using JavaScript. Let’s see the simple example of JavaScript that displays alert dialog box.</p>
+
+<pre>
+    &lt;script type="text/javascript"&gt;  
+        alert("Hello Javatpoint");  
+    &lt;/script&gt;  
+</pre>
+<br> 
+<h4><u>2) JavaScript Example :</u></h4>code between the head tag
+<p>Let’s see the same example of displaying alert dialog box of JavaScript that is contained inside the head tag.</p>
+
+<p>In this example, we are creating a function msg(). To create function in JavaScript, you need to write function with function_name as given below.</p>
+
+<p>To call function, you need to work on event. Here we are using onclick event to call msg() function.</p><br>
+<pre>
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;script type="text/javascript"&gt;  
+        function msg(){  
+        alert("Hello Javatpoint");  
+        }  
+    &lt;/script&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;  
+    &lt;p&gt;Welcome to JavaScript&lt;/p&gt;  
+    &lt;form&gt;  
+    &lt;input type="button" value="click" onclick="msg()"/&gt;  
+    &lt;/form&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre>
+<br>
+<h4><u>JavaScript comments :</u></h4><br>
+    <p>Advantage of javaScript comments</p>
+    <p>Single-line and Multi-line comments</p>
+The JavaScript comments are meaningful way to deliver message. It is used to add information about the code, warnings or suggestions so that end user can easily interpret the code.
+
+<p>The JavaScript comment is ignored by the JavaScript engine i.e. embedded in the browser.</p>
+<p>PauseUnmute</p>
+<p>Fullscreen</p><br>
+
+<h4><u>Advantages of JavaScript comments:</u></h4><br>
+
+There are mainly two advantages of JavaScript comments.
+    <p>To make code easy to understand It can be used to elaborate the code so that end user can easily understand the code.</p>
+    <p>To avoid the unnecessary code It can also be used to avoid the code being executed. Sometimes, we add the code to perform some action. But after sometime, there may be need to disable the code. In such case, it is better to use comments.</p>
+<br>
+    <h4><u>Types of JavaScript Comments:</u></h4><br>
+    There are two types of comments in JavaScript.
+        <p>Single-line Comment</p>
+        <p>Multi-line Comment</p><br>
+
+    <h4><u>JavaScript Single line Comment:</u></h4><br>
+    <p>It is represented by double forward slashes (//). It can be used before and after the statement.</p>
+    <p>Let’s see the example of single-line comment i.e. added before the statement.</p><br>
+
+<pre>    
+    &lt;script&gt;  
+        // It is single line comment  
+        document.write("hello javascript");  
+    &lt;/script&gt; 
+</pre>
+
+<pre>
+
+    &lt;script&gt;  
+        var a=10;  
+        var b=20;  
+        var c=a+b;//It adds values of a and b variable  
+        document.write(c);//prints sum of 10 and 20  
+    &lt;/script&gt; 
+</pre>
+<br>
+<h4><u>JavaScript Multi line Comment</u></h4><br>
+<p>It can be used to add single as well as multi line comments. So, it is more convenient.</p>
+
+<p>It is represented by forward slash with asterisk then asterisk with forward slash. For example:</p><br>
+
+/* your code here  */  
+It can be used before, after and middle of the statement.<br>
+<pre>
+    &lt;script&gt;  
+        /* It is multi line comment.  
+        It will not be displayed */  
+        document.write("example of javascript multiline comment");  
+    &lt;/script&gt;
+</pre>
+<br>
+<h4><u>JavaScript Variable:</u></h4><br>
+<p>A JavaScript variable is simply a name of storage location.</p> 
+<p>There are two types of variables in JavaScript : local variable and global variable.</p>
+
+<p>There are some rules while declaring a JavaScript variable (also known as identifiers).</p>
+
+    <p>Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.</p>
+    <p>After first letter we can use digits (0 to 9), for example value1.</p>
+    <p>JavaScript variables are case sensitive, for example x and X are different variables.</p><br>
+
+<h4><u>Correct JavaScript variables:</u></h4><br>
+    <p>var x = 10; </p> 
+    <p>var _value="sonoo"; </p><br>
+<h4><u>Incorrect JavaScript variables:</u></h4><br>
+    <p>var  123=30;</p>  
+    <p>var *aa=320;</p><br>  
+<h4><u>Example of JavaScript variable:</u></h4><br>
+Let’s see a simple example of JavaScript variable.
+<pre>
+    &lt;script&gt;  
+        var x = 10;  
+        var y = 20;  
+        var z=x+y;  
+        document.write(z);  
+    &lt;/script&gt;  
+</pre>
+<br>
+<h4><u>JavaScript local variable:</u></h4><br>
+
+A JavaScript local variable is declared inside block or function. It is accessible within the function or block only. 
+
+<h4><u>For example:</u></h4><br>
+<pre>
+    &lt;script&gt;  
+        function abc(){  
+        var x=10;//local variable  
+        }  
+    &lt;/script&gt; 
+            or
+    &lt;script&gt;  
+        If(10&lt;13){  
+        var y=20;// local variable  
+        }  
+    &lt;/script&gt;  
+</pre>
+<br>
+<h4><u>JavaScript global variable:</u></h4>
+A JavaScript global variable is accessible from any function. A variable i.e. declared outside the function or declared with window object is known as global variable.<br>
+
+<h4><u>For example:</u></h4><br>
+<pre>
+    &lt;script&gt;  
+        var data=200;//gloabal variable  
+        function a(){  
+        document.writeln(data);  
+        }  
+        function b(){  
+        document.writeln(data);  
+        }  
+        a();//calling JavaScript function  
+        b();  
+    &lt;/script&gt; 
+</pre>
+<br>
+<h4><u>JavaScript Form Validation:</u></h4><br>
+<p>It is important to validate the form submitted by the user because it can have inappropriate values. So, validation is must to authenticate user.</p>
+<p>JavaScript provides facility to validate the form on the client-side so data processing will be faster than server-side validation.</p>
+<p>Most of the web developers prefer JavaScript form validation.</p>
+Through JavaScript, we can validate name, password, email, date, mobile numbers and more fields.<br>
+
+<h4><u>JavaScript Form Validation Example:</u></h4><br>
+
+<p>In this example, we are going to validate the name and password. The name can’t be empty and password can’t be less than 6 characters long.</p>
+<p>Here, we are validating the form on form submit. The user will not be forwarded to the next page until given values are correct.</p>
+
+<pre>
+    &lt;script&gt;  
+        function validateform(){  
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value;  
+  
+        if (name==null || name==""){  
+            alert("Name can't be blank");  
+            return false;  
+        }else if(password.length&lt;6){  
+            alert("Password must be at least 6 characters long.");  
+            return false;  
+            }  
+        }  
+    &lt;/script&gt;  
+    &lt;body&gt;  
+    &lt;form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" &gt;  
+        Name: &lt;input type="text" name="name"&gt;&lt;br/&gt; 
+        Password: &lt;input type="password" name="password"&gt;&lt;br/&gt;  
+    &lt;input type="submit" value="register"&gt;  
+    &lt;/form&gt;  
+</pre>
+<br>
+<h4><u>JavaScript Retype Password Validation:</u></h4><br>
+<pre>
+    &lt;script type="text/javascript"&gt;  
+        function matchpass(){  
+        var firstpassword=document.f1.password.value;  
+        var secondpassword=document.f1.password2.value;  
+  
+        if(firstpassword==secondpassword){  
+        return true;  
+        }  
+        else{  
+        alert("password must be same!");  
+        return false;  
+        }  
+        }  
+    &lt;/script&gt;  
+  
+    &lt;form name="f1" action="register.jsp" onsubmit="return matchpass()"&gt;  
+        Password:&lt;input type="password" name="password" /&gt;&lt;br/&gt;  
+        Re-enter Password:&lt;input type="password" name="password2"/&gt;&lt;br/&gt; 
+    &lt;input type="submit"&gt;  
+    &lt;/form&gt; 
+</pre>
+<br>
+<h4><u>JavaScript Number Validation:</u></h4><br>
+Let's validate the textfield for numeric value only. Here, we are using isNaN() function.
+
+<pre>
+    &lt;script&gt;  
+        function validate(){  
+        var num=document.myform.num.value;  
+        if (isNaN(num)){  
+          document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+          return false;  
+        }else{  
+          return true;  
+          }  
+        }  
+    &lt;/script&gt;  
+    &lt;form name="myform" onsubmit="return validate()" &gt;  
+        Number: &lt;input type="text" name="num"&gt;&lt;span id="numloc"&gt;&lt;/span&gt;&lt;br/&gt;  
+    &lt;input type="submit" value="submit"&gt;  
+    &lt;/form&gt; 
+</pre> <br>
+
+<h4><u>JavaScript validation with image:</u></h4><br>
+Let’s see an interactive JavaScript form validation example that displays correct and incorrect image if input is correct or incorrect.
+
+<pre>
+    &lt;script&gt;  
+        function validate(){  
+        var name=document.f1.name.value;  
+        var password=document.f1.password.value;  
+        var status=false;  
+  
+        if(name.length&lt;1){  
+        document.getElementById("nameloc").innerHTML=  
+        " &lt;img src='unchecked.gif'/&gt; Please enter your name";  
+        status=false;  
+        }else{  
+        document.getElementById("nameloc").innerHTML=" &lt;img src='checked.gif'/&gt;";  
+        status=true;  
+        }  
+        if(password.length&lt;6){  
+        document.getElementById("passwordloc").innerHTML=  
+        " &lt;img src='unchecked.gif'/&gt; Password must be at least 6 char long";  
+        status=false;  
+        }else{  
+        document.getElementById("passwordloc").innerHTML=" &lt;img src='checked.gif'/&gt;";  
+        }  
+        return status;  
+        }  
+    &lt;/script&gt;  
+  
+    &lt;form name="f1" action="#" onsubmit="return validate()"&gt; 
+    &lt;table&gt;  
+    &lt;tr&gt;&lt;td&gt;Enter Name:&lt;/td&gt;&lt;td&gt;&lt;input type="text" name="name"/&gt;  
+    &lt;span id="nameloc"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;  
+    &lt;tr&gt;&lt;td&gt;Enter Password:&lt;/td&gt;&lt;td&gt;&lt;input type="password" name="password"/&gt; 
+    &lt;span id="passwordloc"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;  
+    &lt;tr&gt;&lt;td colspan="2"&gt;&lt;input type="submit" value="register"/&gt;&lt;/td&gt;&lt;/tr&gt;  
+    &lt;/table&gt;  
+    &lt;/form&gt;
+</pre>  
+ <br>
+
+ <h4><u>javaScript email validation</u></h4><br>
+ 
+ We can validate the email by the help of JavaScript.
+
+<h4><u>There are many criteria that need to be follow to validate the email id such as:</u></h4>
+        <p>email id must contain the @ and . character</p>
+        <p>There must be at least one character before and after the @.</p>
+        <p>There must be at least two characters after . (dot).</p><br>
+
+ <h4><u>Let's see the simple example to validate the email field.</u></h4><br>
+ <pre>
+    &lt;script&gt;  
+        function validateemail()  
+        {  
+        var x=document.myform.email.value;  
+        var atposition=x.indexOf("@");  
+        var dotposition=x.lastIndexOf(".");  
+        if (atposition&lt;1 || dotposition&lt;atposition+2 || dotposition+2&gt;=x.length){  
+            alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+            return false;  
+            }  
+        }  
+    &lt;/script&gt;  
+    &lt;body&gt;  
+    &lt;form name="myform"  method="post" action="#" onsubmit="return validateemail();"&gt;  
+        Email: &lt;input type="text" name="email"&gt;&lt;br/&gt;  
+   
+    &lt;input type="submit" value="register"&gt;  
+    &lt;/form&gt; 
+</pre> 
+ 
+ <h4><u> JavaScript Events</u></h4><br>
+
+ <p>The change in the state of an object is known as an Event. In html, there are various events which represents that some activity is performed by the user or by the browser. When javascript code is included in HTML, js react over these events and allow the execution. This process of reacting over the events is called Event Handling. Thus, js handles the HTML events via Event Handlers.</p>
+ 
+ <p>For example, when a user clicks over the browser, add js code, which will execute the task to be performed on the event.</p>
+ 
+ <h4><u>Some of the HTML events and their event handlers are:</u></h4><br>
+ 
+ <h4><u>Mouse events:</u></h4>
+ 
+ Event Performed	Event Handler	Description
+ click	onclick	When mouse click on an element
+ <p>mouseover	onmouseover	When the cursor of the mouse comes over the element</p>
+ <p>mouseout	onmouseout	When the cursor of the mouse leaves an element</p>
+ <p>mousedown	onmousedown	When the mouse button is pressed over the element</p>
+ <p>mouseup	onmouseup	When the mouse button is released over the element</p>
+ <p>mousemove	onmousemove	When the mouse movement takes place.</p><br>
+
+ <h4><u>Keyboard events:</u></h4><br>
+ 
+ Event Performed	Event Handler	Description
+ Keydown & Keyup	onkeydown & onkeyup	When the user press and then release the key<br>
+ <h4><u>Form events:</u></h4><br>
+ <p>Event Performed	Event Handler	Description</p>
+ <p>focus	onfocus	When the user focuses on an element</p>
+ <p>submit	onsubmit	When the user submits the form</p>
+ <p>blur	onblur	When the focus is away from a form element</p>
+ <p>change	onchange	When the user modifies or changes the value of a form element</p><br>
+ <h4><u>Window/Document events</u></h4><br>
+ <p>Event Performed	Event Handler	Description</p>
+ <p>load	onload	When the browser finishes the loading of the page</p>
+ <p>unload	onunload	When the visitor leaves the current webpage, the browser unloads it</p>
+ <p>resize	onresize	When the visitor resizes the window of the browser</p>
+ Let's discuss some examples over events and their handlers.<br>
+
+ <h4><u>Click Event</u></h4><br>
+ <pre>
+    &lt;html&gt;  
+    &lt;head&gt; Javascript Events &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;script language="Javascript" type="text/Javascript"&gt;  
+    &lt;!--  
+     function clickevent()  
+     {  
+         document.write("This is JavaTpoint");  
+     }  
+     //--&gt;
+    &lt;/script&gt;  
+    &lt;form&gt;  
+    &lt;input type="button" onclick="clickevent()" value="Who's this?"/&gt;  
+    &lt;/form&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre><br>
+ <h4><u> MouseOver Event</u></h4><br>
+<pre>
+    &lt;html&gt; 
+    &lt;head&gt;   
+    &lt;h1&gt; Javascript Events &lt;/h1&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;script language="Javascript" type="text/Javascript"&gt;  
+    &lt;!--  
+     function mouseoverevent()  
+     {  
+         alert("This is JavaTpoint");  
+     }  
+     //--&gt;  
+    &lt;/script&gt;  
+    &lt;p onmouseover="mouseoverevent()"&gt; Keep cursor over me&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre><br>
+ <h4><u>Focus Event</u></h4><br>
+ <pre>
+    &lt;html&gt;  
+    &lt;head&gt; Javascript Events&lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h2&gt; Enter something here&lt;/h2&gt;  
+    &lt;input type="text" id="input1" onfocus="focusevent()"/&gt;  
+    &lt;script&gt;  
+    &lt;!--  
+          function focusevent()  
+          {  
+                document.getElementById("input1").style.background=" aqua";  
+          }  
+        //--&gt; 
+    &lt;/script&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+ </pre><br>
+ <h4><u>Keydown Event</u></h4><br>
+ <pre>
+    &lt;html&gt;  
+    &lt;head&gt; Javascript Events&lt;/head&gt;  
+    &lt;body&gt;
+    &lt;h2&gt; Enter something here&lt;/h2&gt;  
+    &lt;input type="text" id="input1" onkeydown="keydownevent()"/&gt;  
+    &lt;script&gt;  
+    &lt;!--  
+          function keydownevent()  
+            {  
+                document.getElementById("input1");  
+                alert("Pressed a key");  
+            }  
+        //--&gt;  
+    &lt;/script&gt; 
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre><br>
+ <h4><u>Load event</u></h4><br>
+ <pre>
+    &lt;html&gt;  
+    &lt;head&gt;Javascript Events&lt;/head&gt;  
+    &lt;/br&gt;  
+    &lt;body onload="window.alert('Page successfully loaded');"&gt;  
+    &lt;script&gt;  
+    &lt;!--  
+        document.write("The page is loaded successfully");  
+        //--&gt;  
+    &lt;/script&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;  
+</pre><br>
+</div>
+
+<a href="rules for js quiz.html"> <input type="button" value="Start quiz" class="btns"></a><br><br>
+
+
+<footer>
+    <p>2021 All Rights Reserved.Free Mouritech Skill Builder Templates</p>
+ </footer>
+
+             </div>
+     </body>
+ </html>

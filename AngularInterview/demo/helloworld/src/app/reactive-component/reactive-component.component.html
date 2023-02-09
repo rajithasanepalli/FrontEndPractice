@@ -1,0 +1,39 @@
+<div class="box">
+    <h1>Login Register</h1>
+
+    <form [formGroup]="registationForm">
+        <div class="form-group inputbox">
+            <label>User Name</label>
+            <input type="text" class="form-control" formControlName="userName" required="">
+
+        </div>
+        <div class="form-group inputbox">
+            <label>Password</label>
+            <input type="text" class="form-control" formControlName="password" required="">
+
+        </div>
+        <div class="form-group inputbox">
+            <label>Email</label>
+        </div><br>
+        <div class="form-group inputbox">
+            <select>
+                <option *ngFor="let x of country">
+                    {{x}}
+
+                </option>
+            </select>
+
+
+        </div>
+
+        <div class="btn">
+            <input type="submit" class="btn btn-primary" name="submit" value="Register">
+        </div>
+
+
+    </form>
+    <div class="capture">
+        {{registationForm.value | json}}
+    </div>
+
+</div>

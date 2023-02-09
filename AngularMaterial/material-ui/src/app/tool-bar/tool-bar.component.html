@@ -1,0 +1,231 @@
+<mat-toolbar class="nav-bar">
+    <span>
+        <button (click)="opened=!opened">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </span>
+    <span class="ds">dashboard</span>
+
+    <div>
+        <span>Home</span>
+        <span>AboutUs</span>
+        <span [matMenuTriggerFor]="serviceMenu">Services</span>
+        <span><button class="btn btn-primary" (click)="profileView()" routerLink="/profile">Profile</button></span>
+        <span [matMenuTriggerFor]="logoutMenu">LogOut</span>
+    </div>
+</mat-toolbar>
+<mat-drawer-container>
+    <mat-drawer [(opened)]="opened" mode="side">
+        <mat-nav-list>
+            <mat-divider></mat-divider>
+            <a href="#" mat-list-item>
+                <mat-icon>home</mat-icon>Home
+            </a>
+            <mat-divider></mat-divider>
+            <a href="#" mat-list-item>
+                <mat-icon>search</mat-icon>Search
+            </a>
+            <mat-divider></mat-divider>
+            <a href="#" mat-list-item>
+                <mat-icon>update</mat-icon>Update
+            </a>
+            <mat-divider></mat-divider>
+            <a href="#" mat-list-item>
+                <mat-icon>create</mat-icon>Create
+            </a>
+            <a href="#" mat-list-item>
+                <mat-icon>refresh</mat-icon>Refresh
+            </a>
+            <mat-divider></mat-divider>
+            <a href="#" mat-list-item>
+                <mat-icon>security</mat-icon>Security
+            </a>
+            <mat-divider></mat-divider>
+            <a href="#" mat-list-item>
+                <mat-icon>folder</mat-icon>Folder
+            </a>
+            <mat-divider></mat-divider>
+
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-grid-list cols="2" rowHeight="400px" gutterSize="5px">
+            <mat-grid-tile>
+                <mat-accordion multi="true" hideToggle>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Angular Fundamentals
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Total no of classes:60+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>This pannel content describes </p>
+                        <mat-action-row>
+                            <button mat-raised-button color="warn">Register</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Angular Material Fundamentals
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Total no of classes:32+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>This pannel content describes </p>
+                        <mat-action-row>
+                            <button mat-raised-button color="warn">Register</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-grid-tile>
+            <mat-grid-tile rowspan="2">
+                <!-- <mat-accordion multi="true" hideToggle>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Angular Fundamentals
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Total no of classes:60+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>This pannel content describes </p>
+                        <mat-action-row>
+                            <button mat-raised-button color="warn">Register</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Angular Material Fundamentals
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Total no of classes:32+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>This pannel content describes </p>
+                        <mat-action-row>
+                            <button mat-raised-button color="warn">Register</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+                </mat-accordion> -->
+                <app-profile *ngIf="viewProfile"></app-profile>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-accordion multi="true" hideToggle>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Angular Fundamentals
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Total no of classes:60+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>This pannel content describes </p>
+                        <mat-action-row>
+                            <button mat-raised-button color="warn">Register</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Angular Material Fundamentals
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Total no of classes:32+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>This pannel content describes </p>
+                        <mat-action-row>
+                            <button mat-raised-button color="warn">Register</button>
+                        </mat-action-row>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-tab-group #tab (selectedTabChange)="myChange(tab.selectedIndex)">
+                    <mat-tab label="angualr">Angular</mat-tab>
+                    <mat-tab label="react">React</mat-tab>
+                    <mat-tab label="vuejs">VueJs</mat-tab>
+                </mat-tab-group>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-horizontal-stepper linear>
+                    <mat-step label="video details" completed="true">
+                        <p>Vidio Details</p>
+                    </mat-step>
+                    <mat-step label="video elements" completed="false" optional>
+                        <p>Vidio Elements</p>
+                        <div>
+                            <button mat-raised-button matStepperPrevious color="warn">Previous</button>
+                            <button mat-raised-button matStepperNext color="accent">Next</button>
+                        </div>
+                    </mat-step>
+                    <mat-step label="video visisbility" completed="false">
+                        <p>Vidio visibility</p>
+                    </mat-step>
+                </mat-horizontal-stepper>
+
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-vertical-stepper linear>
+                    <mat-step label="video details" completed="true">Vidio Details</mat-step>
+                    <mat-step label="vidio elements" completed="false" optional>Video Elements</mat-step>
+                    <mat-step label="vidio visible" completed="false">Video Visibility</mat-step>
+                </mat-vertical-stepper>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="legacy" color="primary">
+                    <mat-label>FirstName</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-form-field appearance="standard" color="accent">
+                    <mat-label>LatName</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-form-field appearance="fill" color="warn">
+                    <mat-label>Email</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-select>
+                    <mat-option value="angular">Angular</mat-option>
+                    <mat-option value="react">React</mat-option>
+                    <mat-option value="vue">VueJs</mat-option>
+                </mat-select>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+    </mat-drawer-content>
+
+</mat-drawer-container>
+<mat-menu #serviceMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="frontMenu">FrontEnd</button>
+    <button mat-menu-item [matMenuTriggerFor]="backMenu">BackEnd</button>
+</mat-menu>
+<mat-menu #frontMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+</mat-menu>
+<mat-menu #backMenu="matMenu">
+    <button mat-menu-item>NodeJs</button>
+    <button mat-menu-item>SpringBoot</button>
+</mat-menu>
+<mat-menu #logoutMenu="matMenu">
+    <button mat-menu-item>Logout-{{userName}}</button>
+</mat-menu>

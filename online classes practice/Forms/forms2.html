@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+</head>
+
+<body>
+    <form oninput="result.value=parseInt(my_range.value)+parseInt(my_num.value)">
+        <input type="range" min="0" max="100" step="10" value="50" id="my_range">
+        <input type="number" value="50" id="my_num">=
+        <output id="result">60</output>
+    </form>
+
+
+
+    <form action="https://www.mouritech.com/#section-welcome" method="post">
+        <input type="range" min="0" max="100" value="50" step="10" id="my_range">
+        <label>Volume</label><br><br>
+        <input type="color" value="#ff0000">
+        <label>Choose Color</label><br><br>
+        <input type="date" value="2021-11-30" min="2021-01-01" max="2021-12-31"><br><br>
+        <input type="datetime-local" value="2021-01-01T10:34" min="2021-01-01T10:34" max="2021-12-31T10:34">
+        <br><br>
+        <input type="time" value="10:45"><br><br>
+        <input type="email" pattern=".+@mouritech\.com" required size="20"><br><br>
+        <input type="file" accept="image/png,image/jpeg">
+        <label>Choose Image</label><br><br>
+        <input type="search"><br><br>
+        <input type="url" pattern="https://.*" placeholder="http://mouritech.in" size="20">
+        <br><br>
+        <input type="week" min="2018-W18" max="2021-W30"><br><br>
+        <input type="image" src="logo.png" width="50px" alt="login"><br><br>
+        <input type="hidden" value="Mouri">
+
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+table{
+    border: 2px dotted black;
+    background-color: #f1bdf1;
+padding: 40px;
+border-radius: 25px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.middle{
+    
+text-align: center;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.btn{
+   border-radius: 5px; 
+   background-color:green;
+   color: white;
+   padding: 3px;
+}
+.btn:hover{
+    background-color:maroon;
+}
+
+
+#maindiv {
+    border: 2px solid black;
+    height: 580px;
+    background-color: white;
+    margin-left: 260px;
+    margin-right: 260px;
+    margin-top: 20px;
+  
+}
+header {
+    height: 130px;
+    background-color:#8abee0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.image1 {
+    height: 90px;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
+#maindiv header b{
+    margin-left: 25px;
+    color:maroon ;
+font-size: 40px;
+
+  }
+      
+      #subdiv1 {
+        background-color:white;
+        height: 255px;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #subdiv1 a{
+        color: blue;
+        text-decoration: none;
+    }
+    
+    .btn1{
+        float: left;
+        margin-left: 300px;
+        padding: 5px;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+            }
+            
+    .btn2{
+        float: left;
+        margin-left:20px;
+        padding: 5px;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+            }
+            .btn1:hover{
+                background-color: red;
+            }
+            .btn2:hover{
+                background-color: red;
+            }
+
+            
+            
+        #subdiv2 {
+            height: 170px;
+            background-color:rgb(83,80,78);
+            font-family:serif;
+      }
+      #subdiv2 nav ul li{
+        float: left;
+        list-style-type: none;
+        width: 120px;
+        margin-top: 10px;
+        
+            font-size: 15px;
+         }
+       #subdiv2  nav ul li ul li{
+            font-size: 11px;
+            color: white;
+        }  
+       
+       #subdiv2 nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        #subdiv2 nav ul li .image2{
+            height: 50px;
+                    width: 75px;
+                    margin-top: 2px;
+                    margin-right: 40px;
+                    border: 1px dashed white;
+                    padding: 1px;
+                
+        
+          }
+          
+  #subdiv2 nav ul li .image3{
+    height: 15px;
+            width: 10px;
+            margin-top: 2px;
+            margin-left: 20px;
+
+  }
+  
+   footer {
+    height: 25px;
+    background-color:#8abee0;
+    color: maroon;
+    text-align: center;
+  line-height: 25px;
+    font-size: 13px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
+#subdiv {
+    background-color:wheat;
+    height: 250px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#maindiv1 {
+    border: 2px solid black;
+    height: 405px;
+    background-color: white;
+    margin-left: 260px;
+    margin-right: 260px;
+    margin-top: 20px;
+
+}
+#maindiv1 b{
+    font-size: 40px;
+    margin-left: 25px;
+    color:maroon ;
+}
+h4{
+    color: green;
+}
+.btn3{
+    float: right;
+    margin-right: 20px;
+    padding: 5px;
+    color:white;
+    background-color: green;
+    border-radius: 5px;
+        }
+    .btn3:hover{
+        background-color:75072d;
+    }
+    .maindiv{
+        height: 600px;
+        border: 2px solid black;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      .maindiv b{
+        font-size: 40px;
+        margin-left: 25px;
+        color:maroon ;
+      }
+    #first{
+        height: 130px;
+        background-color:#8abee0;
+    
+    }
+  .maindiv #first .image1 {
+        height: 90px;
+        width: 200px;
+        margin-left: 1px;
+        margin-top: 5px;
+   }
+  #first  b {
+    font-size: 40px;
+    margin-left: 250px;
+    color:maroon ;
+    margin-top: 1px;
+    
+      }
+    .subdiv1{
+        height: 290px;
+        background-color: wheat;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .subdiv2{
+        height: 150px;
+        background-color:rgb(83,80,78);
+    font-family: serif;
+    }
+   #footer2 {
+        height: 30px;
+        background-color:#8abee0;
+        color: maroon;
+        text-align: center;
+      line-height: 25px;
+        font-size: 13px;
+    }
+    .subdiv1 ol a{
+        
+    text-decoration: none;
+    color: blue;
+    
+    }
+    .subdiv1 ol a:hover{
+        
+        color: green;
+        
+        
+        }
+  
+    .subdiv1 u{
+        font-size: 20px;
+    }
+
+     .image2{
+        float: right;
+        margin-right: 10px;
+        margin-top: 1px;
+        width: 400px;
+        height: 240px;
+    }
+   
+   #parent{
+        height: 200px;
+        
+        width: 400px;
+        margin-left: 5px;
+        padding: 20px;
+        background-color: wheat;
+        border-radius: 20px;
+      }
+      #parent ul{
+          text-align: center;
+      }
+      
+  .subdiv2 ul li{
+    float: left;
+    list-style-type: none;
+    width: 180px;
+    margin-top: 10px;
+    color: white;
+    
+
+     }
+   .subdiv2  ul li ul li{
+        font-size: 10px;
+        color: white;
+    }  
+   
+   .subdiv2  ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .subdiv2 .image2{
+        height: 60px;
+                width: 80px;
+                margin-top: 5px;
+                margin-right: 80px;
+                border: 2px dotted white;
+                padding: 5px;
+              
+              }
+      
+.subdiv2 nav ul li .image3{
+height: 15;
+        width: 15px;
+        margin-top: 5px;
+        margin-left: 25px;
+        float: left;
+
+}
+
+.subdiv1 .image3{
+    height: 25px;
+        width: 30px;
+        margin-left: 20px;
+    
+    }
+    .subdiv1 b{
+        margin-left: 5px;
+        margin-top: 5px;
+        font-size: 30px;
+          }
+          .maindiv2{
+            height: 17345px;
+            border: 2px solid black;
+            margin-left: 2px;
+            margin-right: 2px;
+        
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+        .c{
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+        .maindiv2 .first{
+           margin-left: 550px;
+           color: blue;
+           font-size: 25px;
+        
+        }
+        .maindiv2 #first .image1{
+            height: 90px;
+            width: 200px;
+            margin-left: 1px;
+            margin-top: 15px;
+          }
+          .maindiv2 h4 u{
+              font-size: 20px;
+    
+          }
+          .maindiv2 ol {
+            margin-left: 18px;
+        }
+        .maindiv3{
+            height: 24145px;
+            border: 2px solid black;
+            margin-left: 2px;
+            margin-right: 2px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .maindiv3 .first{
+           margin-left: 550px;
+           color: blue;
+           font-size: 25px;
+        
+        }
+        .maindiv3 #first .image1{
+            height: 90px;
+            width: 200px;
+            margin-left: 1px;
+            margin-top: 15px;
+          }
+          .maindiv3 h4 u{
+              font-size: 20px;
+    
+          }
+          .maindiv3 ol {
+            margin-left: 18px;
+        }
+        .btns{
+            float: right;
+            margin-right: 20px;
+            padding: 5px;
+            color:white;
+            background-color: green;
+            border-radius: 5px;
+             }
+            .btns:hover{
+                background-color:75072d;
+            }
+            #quizdiv{
+                height: 840px;
+                border: 2px solid black;
+                margin-left: 200px;
+                margin-right: 200px;
+                background-image:  linear-gradient(50deg, violet, transparent);
+              }
+            
+              #quizdiv1{
+                height: 859px;
+                border: 2px solid black;
+                margin-left: 200px;
+                margin-right: 200px;
+                background-image:  linear-gradient(50deg, violet, transparent);
+              }
+
+              #quizdiv1 #first .image1 {
+                height: 90px;
+                width: 200px;
+                margin-left: 1px;
+                margin-top: 5px;
+           }
+          #quizdiv1  b {
+            font-size: 40px;
+            margin-left: 100px;
+            color:maroon ;
+            margin-top: 1px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+             }
+            #quizdiv #first .image1 {
+                  height: 90px;
+                  width: 200px;
+                  margin-left: 1px;
+                  margin-top: 5px;
+             }
+            #quizdiv   b {
+              font-size: 40px;
+              margin-left: 100px;
+              color:maroon ;
+              margin-top: 1px;
+              font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+              
+               }
+               #subquiz{
+                   
+            margin-left: 50px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+                   
+                   }
+                .radio{
+                    margin: 0 15px 0 15px;
+
+                }
+                       
+                   
+               span{
+                   font-size: 25px;
+                   color: blue;
+                   margin-left: 230px;
+                
+               }
+               .info-list{
+                   margin-left: 230px;
+                   font-family: Georgia, 'Times New Roman', Times, serif;
+               }
+               .buttons{
+                   background-color: green;
+                   color: white;
+                   border-radius: 25px;
+               }
+              .f{
+                height: 35px;
+                background-color:#8abee0;
+                color: maroon;
+                text-align: center;
+              line-height: 35px;
+                font-size: 14px;
+                font-family: serif;
+              }
+              .maindiv4{
+                height: 23750px;
+                border: 2px solid black;
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+            .maindiv4 .first{
+               margin-left: 550px;
+               color: blue;
+               font-size: 25px;
+            
+            }
+            .maindiv4 #first .image1{
+                height: 90px;
+                width: 200px;
+                margin-left: 1px;
+                margin-top: 15px;
+              }
+              .maindiv4 h4 u{
+                  font-size: 20px;
+        
+              }
+              .maindiv4 ol {
+                margin-left: 20px;
+            }
+            .btns{
+                float: right;
+                margin-right: 20px;
+                padding: 5px;
+                color:white;
+                background-color: green;
+                border-radius: 5px;
+                 }
+                .btns:hover{
+                    background-color:75072d;
+                }
+               #quiz-time-left{
+                float: right;
+                margin-right: 15px;
+                padding: 5px;
+                border: 2px solid black;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                background-color: wheat;
+                   
+               }
+               .maindiv5{
+                height: 8330px;
+                border: 2px solid black;
+                margin-left: 2px;
+                margin-right: 2px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .maindiv5 .first{
+               margin-left: 550px;
+               color: blue;
+               font-size: 25px;
+            
+            }
+            .maindiv5 #first .image1{
+                height: 90px;
+                width: 200px;
+                margin-left: 1px;
+                margin-top: 15px;
+              }
+              .maindiv5 h4 u{
+                  font-size: 20px;
+        
+              }
+              .maindiv5 ol {
+                margin-left: 18px;
+            }
+            .maindiv6{
+                height: 39880px;
+                border: 2px solid black;
+                margin-left: 2px;
+                margin-right: 2px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .maindiv6 .first{
+               margin-left: 550px;
+               color: blue;
+               font-size: 25px;
+            
+            }
+            .maindiv6 #first .image1{
+                height: 90px;
+                width: 200px;
+                margin-left: 1px;
+                margin-top: 15px;
+              }
+              .maindiv6 h4 u{
+                  font-size: 20px;
+        
+              }
+              .maindiv6 ol {
+                margin-left: 18px;
+            }
+            .maindiv7{
+                height: 13140px;
+                border: 2px solid black;
+                margin-left: 2px;
+                margin-right: 2px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .maindiv7 .first{
+                margin-left: 550px;
+                color: blue;
+                font-size: 25px;
+             
+             }
+             .maindiv7 #first .image1{
+                 height: 90px;
+                 width: 200px;
+                 margin-left: 1px;
+                 margin-top: 15px;
+               }
+               .maindiv7 h4 u{
+                   font-size: 20px;
+         
+               }
+               .maindiv7 ol {
+                 margin-left: 18px;
+             }
+            

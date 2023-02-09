@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>Registration form for freshers</title>
+    <link rel="stylesheet" href="project.css">
+   
+</head>
+
+<body>
+    <form method="post" name="myform" 
+    action="file:///C:/Users/rajithas/Desktop/miniproject/confirmation%20of%20registration.html"  onsubmit="return validation()">
+        <table cellpadding="8px" class="center">
+
+            <thead>
+                <tr>
+                    <td colspan="4" class="middle">
+                        <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png"  width="150px">
+                    </td>
+                <tr>
+                    <td colspan="4" class="middle"><b><u>MT SKILL BUILDER</u></b></td>
+                </tr>
+                </tr>
+            </thead>
+            <tr>
+                <td colspan="3" class="middle">
+                    <h3><u>Registration form </u></h3>
+                </td>
+            </tr>
+            <tr>
+                <td> Name of the Employee</td>
+
+                <td> <input type="text" id="user"  name="name"/>
+                    
+                  </td>
+        
+            
+            </tr><br><br>
+
+            <tr>
+                <td>Gender</td>
+                <td>Male<input type="radio" name="gender" class="male" />
+
+                    Female <input type="radio" name="gender" class="female" />
+                
+
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="textbox" name="date1" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Number
+                </td>
+                <td><input type="number" name="mobile" class="mobile" /></td>
+
+            </tr>
+            <tr>
+                <td>Job Profile</td>
+                <td><select>
+                        <option>Software Engineer</option>
+                        <option>Associate Devops Engineer</option>
+                        <option>Tecnical Arcihtect</option>
+                        <option>Sr Specialist</option>
+                        <option>Practice Lead</option>
+                        <option>Associate Manager</option>
+                        <option>Associate Trainee</option>
+                        <option>Data Analyst</option>
+                        <option>Specialist</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Working Location</td>
+                <td><select>
+                    <option>Hyderabad(India)</option>
+                    <option>Visakhapatnam</option>
+                        <option>Bangolore</option>
+                       <option>Kolhapur</option>
+                    </select>
+            </tr>
+            <tr>
+                <td>Course Learned Before</td>
+                <td><textarea name="text" id="text" cols="23" rows="5"></textarea></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2" class="middle">
+                    <a href="confirmation of registration.html"> <input type="submit" value="Register" class="btn"/></a>
+                    <input type="reset" value="reset" class="btn" />
+                    <a href="mt skill builder login form.html"> <input type="button" value="back" class="btn"></a>
+                </td>
+            </tr>
+            
+
+        </table>
+    </form>
+    <script type="text/javascript"> 
+        function validation(){
+           var name=document.myform.name.value;
+           var gender=document.myform.gender.value;
+           var date1=document.myform.date1.value;
+           var mobile=document.myform.mobile.value;
+           
+        
+        
+           if (name==null||name==""){  
+               window.alert("Name can't be blank");
+               return false;
+               
+                 }
+               else if(gender.length<1){
+                   window.alert("Please select gender");
+                   return false;
+                    }
+                    else if(date1.length<10){
+
+                        window.alert("Please select date");
+                   return false;
+
+                    }
+                    else if(mobile.length!=10){
+
+       window.alert("Please enter a valid 10 digit number");
+      return false;
+
+} 
+        }
+    
+        </script>
+        
+ </body>
+</html>

@@ -1,0 +1,11 @@
+<script>
+    function function_one(arg1, arg2 = "Hello_2", ...arg3) {
+        console.log(arg1, arg2, arg3);
+
+    }
+    function_one();
+    function_one(undefined, undefined, undefined);
+    function_one(null, null, null);
+    function_one("Hello_1", undefined, "Hello_3");
+
+</script>

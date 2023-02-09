@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Quiz for html</title>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="quizdiv">
+            <header><br>
+                <img src="C:\Users\rajithas\Desktop\miniproject\MT logo.png" class="image1">
+                <b>MT SKILL BUILDER</b>
+            </header><br>
+
+
+<div id="subquiz">
+    <div style="font-weight: bold;" id="quiz-time-left"></div>
+    <script type="text/javascript">
+    var total_sec=60*2;
+    var c_min=parseInt(total_sec/60);
+    var c_sec=parseInt(total_sec/60);
+    function CheckTime(){
+        document.getElementById("quiz-time-left").innerHTML
+        ='Time Left:'+c_min+'min'+c_sec+'sec';
+        if(total_sec<=0){
+            setTimeout('document.quiz.submit()',1);
+             }
+             else{
+                 total_sec=total_sec-1;
+                 c_min=parseInt(total_sec/60);
+                 c_sec=parseInt(total_sec%60);
+                 setTimeout("CheckTime()",1000); 
+             }
+    }
+    setTimeout("CheckTime()",1000);
+
+    </script>
+    <form method="post" name="quiz"></form>
+    
+      1.What does HTML stands for?<br><br>
+        <input type="radio" name="question1" id="correct1" class="radio">Hypertext Markup Language.<br>
+        <input type="radio" name="question1"  class="radio">Hypertext Machine language<br>
+        <input type="radio" name="question1"  class="radio">Hypertext and links markup language<br>
+        <input type="radio" name="question1"  class="radio">Hightext machine language <br><br>
+    
+
+        2.How is document type initialized in HTML5.?<br><br>
+        <input type="radio" name="question2"  class="radio">&lt;/DOCTYPE HTML&gt;<br>
+        <input type="radio" name="question2"  class="radio">&lt;/DOCTYPE&gt;<br>
+        <input type="radio" name="question2" id="correct2"  class="radio">&lt;!DOCTYPE HTML&gt;<br>
+        <input type="radio" name="question2"  class="radio">&lt;/DOCTYPE html&gt;<br><br>
+
+        
+        3.Which of the following HTML Elements is used for making any text bold ?<br><br>
+        <input type="radio" name="question3"  class="radio">&lt;p&gt;<br>
+        <input type="radio" name="question3"  class="radio">&lt;i&gt;<br>
+        <input type="radio" name="question3"  class="radio">&lt;li&gt;<br>
+        <input type="radio" name="question3" id="correct3"  class="radio">&lt;b&gt;<br><br>
+
+         
+        4.Which of the following HTML element is used for creating an unordered list?<br><br>
+        <input type="radio" name="question4"  class="radio">&lt;ui&gt;<br>
+        <input type="radio" name="question4"  class="radio">&lt;i&gt;<br>
+        <input type="radio" name="question4"  class="radio">&lt;em&gt;<br>
+        <input type="radio" name="question4" id="correct4"  class="radio">&lt;ul&gt;<br><br>
+
+         
+        5.Which of the following characters indicate closing of a tag?<br><br>
+        <input type="radio" name="question5"  class="radio">.<br>
+        <input type="radio" name="question5" id="correct5"  class="radio">/<br>
+        <input type="radio" name="question5"  class="radio">\<br>
+        <input type="radio" name="question5"  class="radio">!<br><br>
+       
+ <input type="submit" name="submit"  value="Submit Quiz" class="btn3" onclick="result()">
+ <script type="text/javascript">
+
+        function result(){
+            var score=0;
+            if (document.getElementById('correct1').checked)
+            {
+                score++;
+            }
+              if (document.getElementById('correct2').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('correct3').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('correct4').checked)
+            {
+                score++;
+            }
+
+            if (document.getElementById('correct5').checked)
+            {
+                score++;
+            }
+
+            alert("Your score is:"+score);
+            if (score >3){
+            alert(" Congratulations you are eligible for the next course ");
+            window.location.href="file:///C:/Users/rajithas/Desktop/miniproject/COURSES%20ENROLLMENT.html";
+        } 
+         else{
+            alert("Sorry you are not eligible for the next course")
+            window.location.href="file:///C:/Users/rajithas/Desktop/miniproject/LOGIN.html";
+
+
+        }
+ }
+        </script>
+        
+           
+        
+    
+
+        </div>
+<br><br>
+        
+<footer>
+    <p>@Copyright 2021 www.mouritech.com.All rights reserved.Developed by MouriTech.</p>
+ </footer>
+        </div>
+        
+
+
+
+        
+
+        
+    </body>
+</html>
